@@ -1,3 +1,20 @@
 {
-    "paciente"
+    "turno": [
+        {
+            "nombre":"Felipe",
+            "apellido":"Faule",
+            "dni":47908145,
+            "telefono":"3517777778",
+            "obra_social": "OSDE",
+            "fecha_y_hora":"2024-11-11 17:00:00"
+        },
+        {
+            "nombre":"Bruno",
+            "apellido":"Faule",
+            "dni":43625453,
+            "telefono":"3517777777"
+            "obra_social": "OSDE",
+            "fecha_y_hora":"2024-11-11 17:10:00"
+        }
+    ]
 }
