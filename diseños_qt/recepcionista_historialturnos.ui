@@ -190,24 +190,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>bottonnuevoturno</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>nuevoturno()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1066</x>
-     <y>591</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>794</x>
-     <y>574</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <slots>
   <slot>nuevoturno()</slot>
  </slots>
