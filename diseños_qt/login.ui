@@ -41,6 +41,9 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
    <widget class="QPushButton" name="login_button">
     <property name="geometry">
@@ -76,6 +79,9 @@
       <width>201</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="password_label">
