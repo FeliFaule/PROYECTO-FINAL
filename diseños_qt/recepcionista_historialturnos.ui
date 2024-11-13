@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1324</width>
+    <height>643</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>1324</width>
@@ -182,5 +190,25 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>bottonnuevoturno</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nuevoturno()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1066</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>794</x>
+     <y>574</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>nuevoturno()</slot>
+ </slots>
 </ui>
