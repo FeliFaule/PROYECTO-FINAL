@@ -37,13 +37,17 @@
      <rect>
       <x>210</x>
       <y>10</y>
-      <width>414</width>
+      <width>421</width>
       <height>42</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>DejaVu Sans Mono</family>
       <pointsize>26</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -117,10 +121,10 @@
    <widget class="QPushButton" name="llamar_button">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>390</y>
-      <width>80</width>
-      <height>23</height>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -130,10 +134,10 @@
    <widget class="QPushButton" name="atender_button">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>180</x>
       <y>390</y>
-      <width>80</width>
-      <height>23</height>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -143,10 +147,10 @@
    <widget class="QPushButton" name="pacientes_button">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>650</x>
       <y>390</y>
-      <width>161</width>
-      <height>23</height>
+      <width>191</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -163,6 +167,12 @@
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuLlamado_al_paciente">
+    <property name="title">
+     <string>Llamado al paciente</string>
+    </property>
+   </widget>
+   <addaction name="menuLlamado_al_paciente"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
