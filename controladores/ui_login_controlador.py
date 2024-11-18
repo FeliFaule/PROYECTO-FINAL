@@ -36,7 +36,7 @@ class Login(QMainWindow, Ui_LoginWindow):
                         QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL MEDICO",QMessageBox.StandardButton.Close)
                     
                     # Si tiene el rol RECEPCION, abre la pantalla de recepción de pacientes
-                    elif usuario_verificado["rol"] == 'RECEPCION':
+                    elif usuario_verificado["rol"] == 'RECEPCIONISTA':
                         QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL RECEPCIONISTA",QMessageBox.StandardButton.Close)
                     
                     # Si el rol no existe, debe informar que el usuario no tiene especificado un ROL válido.
