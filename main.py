@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QApplication
 from controladores.ui_login_controlador import Login
+
 
 
 if __name__ == "__main__":
