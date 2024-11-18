@@ -74,8 +74,9 @@ class Login(QMainWindow, Ui_LoginWindow):
 #                    QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos",QMessageBox.StandardButton.Retry,QMessageBox.StandardButton.Retry)
         
 
+        except FileNotFoundError:
+            QMessageBox.critical(self, "Error", "El archivo de usuarios no se encontró.")
+        except json.JSONDecodeError:
+            QMessageBox.critical(self, "Error", "Error en el formato del archivo de usuarios.")
         except Exception as e:
-            # Capturar cualquier excepción y mostrar el error
-            print(f"Se produjo un error: {e}")
-#            QMessageBox.warning(self, "Error", "La base de usuarios no existe {error}",QMessageBox.StandardButton.Close)
-
+            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los usuarios: {e}")
