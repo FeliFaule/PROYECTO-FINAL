@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1324</width>
+    <height>643</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>1324</width>
@@ -56,8 +64,8 @@
    <widget class="QPushButton" name="bottonnuevoturno">
     <property name="geometry">
      <rect>
-      <x>1020</x>
-      <y>520</y>
+      <x>570</x>
+      <y>530</y>
       <width>181</width>
       <height>71</height>
      </rect>
@@ -183,4 +191,7 @@ p, li { white-space: pre-wrap; }
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>nuevoturno()</slot>
+ </slots>
 </ui>

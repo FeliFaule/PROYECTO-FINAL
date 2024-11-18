@@ -278,4 +278,7 @@
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>guardar()</slot>
+ </slots>
 </ui>

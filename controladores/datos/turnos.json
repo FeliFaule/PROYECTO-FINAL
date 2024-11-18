@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "francisco ",
+        "apellido": "conejero",
+        "DNI": "48455166",
+        "telefono": "3512454499",
+        "obrasocial": "apross",
+        "fecha_hora": "2000-01-01 00:00:00"
+    },
+    {
+        "nombre": "TOMAS",
+        "apellido": "BARRIGON",
+        "DNI": "48455166",
+        "telefono": "231231231",
+        "obrasocial": "APROSS",
+        "fecha_hora": "2000-01-01 00:00:00"
+    }
+]
