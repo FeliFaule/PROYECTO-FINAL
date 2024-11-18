@@ -1,4 +1,3 @@
-#import csv
 import json
 from interfaces.ui_login import Ui_LoginWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
@@ -9,15 +8,14 @@ from PyQt5.QtCore import pyqtSlot
 class Login(QMainWindow, Ui_LoginWindow):
     def __init__(self):  # Constructor de la clase Login
         super().__init__()  # Llama al constructor de QMainWindow, inicializando la ventana
-        self.ui = Ui_LoginWindow()  # Crea una instancia de Ui_LoginWindow
-        self.ui.setupUi(self)  # Llama a setupUi correctamente, pasándole la instancia de 'self' (Login)
-        self.ui.login_button.clicked.connect(self.login)  # Conectar el botón al slot 'login'    
+        self.setupUi(self)  # Llama a setupUi correctamente, pasándole la instancia de 'self' (Login)
+        self.login_button.clicked.connect(self.login)  # Conectar el botón al slot 'login'    
 
     @pyqtSlot()
     def login(self):
-        file_path = 'datos/usuarios.json'
-        user = self.ui.user_data.text().upper()
-        password = self.ui.password_data.text().upper()
+        file_path = 'datos/usuarios.json'     
+        user = self.user_data.text().upper()
+        password = self.password_data.text().upper()
 
         try:
             usuario_verificado = False
@@ -47,32 +45,6 @@ class Login(QMainWindow, Ui_LoginWindow):
                 else:
                     QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos",QMessageBox.StandardButton.Retry,QMessageBox.StandardButton.Retry)
 
-#            with open(file_path, mode='r') as archivo:
-#                contenido = csv.reader(archivo)
-#                print(contenido)
-
-                # Buscar la primera fila que cumpla con la condición
-#                usuario_verificado = next((fila for fila in contenido if fila[0] == user and fila[1] == password), None)
-            
-#                if usuario_verificado:
-#                    print(f"Encontrado: {usuario_verificado[0]} con password: {usuario_verificado[1]} y Rol: {usuario_verificado[2]}")
-
-                    # Si tiene el rol MEDICO, abre la pantalla de atención de pacientes
-#                    if usuario_verificado[2] == 'MEDICO':
-#                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL MEDICO",QMessageBox.StandardButton.Close)
-                    
-                    # Si tiene el rol RECEPCION, abre la pantalla de recepción de pacientes
-#                    elif usuario_verificado[2] == 'RECEPCION':
-#                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL RECEPCIONISTA",QMessageBox.StandardButton.Close)
-                    
-                    # Si el rol no existe, debe informar que el usuario no tiene especificado un ROL válido.
-#                    else:
-#                        QMessageBox.critical(self, "Error", f"El usuario {user} no tiene un ROL válido. Contacta al administrador",QMessageBox.StandardButton.Close)
-
-
-#                else:
-#                    QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos",QMessageBox.StandardButton.Retry,QMessageBox.StandardButton.Retry)
-        
 
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de usuarios no se encontró.")
