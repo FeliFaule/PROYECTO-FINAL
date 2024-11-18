@@ -48,6 +48,7 @@ class Ui_LoginWindow(object):
         self.login_button = QtWidgets.QPushButton(self.centralwidget)
         self.login_button.setGeometry(QtCore.QRect(180, 160, 121, 31))
         self.login_button.setObjectName("login_button")
+        self.login_button.setDefault(True)
 
         LoginWindow.setCentralWidget(self.centralwidget)
 
