@@ -1,7 +1,7 @@
 import json
 from interfaces.ui_login import Ui_LoginWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
-from PyQt5.QtCore import pyqtSlot
+from controladores.recepcionista_historial_turnos_controlador import RecepcionistaWindow
 
 # TODA LA LOGICA DE LA VENTANA LOGIN
 
@@ -11,7 +11,6 @@ class Login(QMainWindow, Ui_LoginWindow):
         self.setupUi(self)  # Llama a setupUi correctamente, pasándole la instancia de 'self' (Login)
         self.login_button.clicked.connect(self.login)  # Conectar el botón al slot 'login'    
 
-    @pyqtSlot()
     def login(self):
         file_path = 'datos/usuarios.json'     
         user = self.user_data.text().upper()
@@ -35,7 +34,10 @@ class Login(QMainWindow, Ui_LoginWindow):
                     
                     # Si tiene el rol RECEPCION, abre la pantalla de recepción de pacientes
                     elif usuario_verificado["rol"] == 'RECEPCIONISTA':
-                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL RECEPCIONISTA",QMessageBox.StandardButton.Close)
+                        self.close()
+                        self.recepcionista_turnos = RecepcionistaWindow()
+                        self.recepcionista_turnos.show()
+#                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL RECEPCIONISTA",QMessageBox.StandardButton.Close)
                     
                     # Si el rol no existe, debe informar que el usuario no tiene especificado un ROL válido.
                     else:
