@@ -1,36 +1,36 @@
 import json
-from interfaces.recepcionista_historialturnos import Ui_MainWindow
+from interfaces.recepcionista_historialturnos import Ui_MainRecepcionista
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
-from PyQt5.QtCore import pyqtSlot
 
-class SecretarioWindow(QMainWindow, Ui_MainWindow):
+class RecepcionistaWindow(QMainWindow, Ui_MainRecepcionista):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.cargar_pacientes()
 
-    @pyqtSlot()
+    
     def cargar_pacientes(self):
         try:
-            with open("datos/pacientes.json", "r") as file:
-                pacientes = json.load(file)
+            with open("datos/pacientes.json", "r") as archivo:
+                contenido = json.load(archivo)
+                pacientes = contenido["pacientes"]
 
             # Limpiar la tabla antes de insertar nuevos datos
-            self.tablahistorialT.setRowCount(0)  # Limpiar la tabla
+            self.tablaListaTurnos.setRowCount(0)  # Limpiar la tabla
 
             # Insertar los datos de los pacientes en la tabla
-            for paciente in pacientes["pacientes"]:
+            for paciente in pacientes:
                 # Agregar una nueva fila en la tabla
-                row_position = self.tablahistorialT.rowCount()
-                self.tablahistorialT.insertRow(row_position)
+                row_position = self.tablaListaTurnos.rowCount()
+                self.tablaListaTurnos.insertRow(row_position)
 
                 # Insertar los datos del paciente en las celdas correspondientes
-                self.tablahistorialT.setItem(row_position, 0, QTableWidgetItem(paciente["nombre"]))
-                self.tablahistorialT.setItem(row_position, 1, QTableWidgetItem(paciente["apellido"]))
-                self.tablahistorialT.setItem(row_position, 2, QTableWidgetItem(paciente["dni"]))
-                self.tablahistorialT.setItem(row_position, 3, QTableWidgetItem(paciente["telefono"]))
-                self.tablahistorialT.setItem(row_position, 4, QTableWidgetItem(paciente["obra_social"]))
-                self.tablahistorialT.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_turno"]))
+                self.tablaListaTurnos.setItem(row_position, 0, QTableWidgetItem(paciente["nombre"]))
+                self.tablaListaTurnos.setItem(row_position, 1, QTableWidgetItem(paciente["apellido"]))
+                self.tablaListaTurnos.setItem(row_position, 2, QTableWidgetItem(paciente["dni"]))
+                self.tablaListaTurnos.setItem(row_position, 3, QTableWidgetItem(paciente["telefono"]))
+                self.tablaListaTurnos.setItem(row_position, 4, QTableWidgetItem(paciente["obra_social"]))
+                self.tablaListaTurnos.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_hora"]))
         
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de pacientes no se encontró.")
