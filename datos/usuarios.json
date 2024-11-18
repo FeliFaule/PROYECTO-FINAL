@@ -1,0 +1,21 @@
+
+{
+    "usuarios" : [
+        {
+            "nombre": "FELIPE",
+            "contrasena": "1234",
+            "rol" : "MEDICO"
+        },
+        {
+            "nombre": "CARDO",
+            "contrasena": "5678",
+            "rol" : "RECEPCIONISTA"
+        },
+        {
+            "nombre": "PANCHO",
+            "contrasena": "XXXX",
+            "rol" : "ENFERMERO"
+        }
+    ]
+
+}
