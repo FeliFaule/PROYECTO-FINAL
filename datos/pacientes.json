@@ -2,11 +2,19 @@
     "pacientes": [
         {
             "nombre": "Juan",
-            "apellido": "Pérez",
+            "apellido": "Pérez Sanchez Disalvo",
             "dni": "12345678",
             "telefono": "123456789",
             "obra_social": "OSDE",
             "fecha_hora": "2024-11-10 14:30"
+        },
+        {
+            "nombre": "Felipe Luis",
+            "apellido": "Bustamante Faule",
+            "dni": "122335458",
+            "telefono": "254564344",
+            "obra_social": "OSDE",
+            "fecha_hora": "2024-11-10 14:45"
         },
         {
             "nombre": "Ana",
