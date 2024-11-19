@@ -1,8 +1,9 @@
 import json
-from interfaces.recepcionista_historialturnos import Ui_MainRecepcionista
+from interfaces.recepcionista_historialturnos import Ui_RecepcionistaMainWindow
+from controladores.recepcionista_turnos_controlador import VentanaNuevoTurno
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 
-class RecepcionistaWindow(QMainWindow, Ui_MainRecepcionista):
+class RecepcionistaWindow(QMainWindow, Ui_RecepcionistaMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -31,7 +32,9 @@ class RecepcionistaWindow(QMainWindow, Ui_MainRecepcionista):
                 self.tablaListaTurnos.setItem(row_position, 3, QTableWidgetItem(paciente["telefono"]))
                 self.tablaListaTurnos.setItem(row_position, 4, QTableWidgetItem(paciente["obra_social"]))
                 self.tablaListaTurnos.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_hora"]))
-        
+            
+            self.tablaListaTurnos.resizeColumnsToContents()
+            
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de pacientes no se encontró.")
         except json.JSONDecodeError:
@@ -39,3 +42,10 @@ class RecepcionistaWindow(QMainWindow, Ui_MainRecepcionista):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los pacientes: {e}")
 
+    def close(self):
+        return super().close()
+    
+    def nuevoTurno(self):
+        ventanaTurno = VentanaNuevoTurno()
+        ventanaTurno.exec_()
+        self.cargar_pacientes()
