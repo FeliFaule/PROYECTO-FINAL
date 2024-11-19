@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RecepcionistaMainWindow</class>
+ <widget class="QMainWindow" name="RecepcionistaMainWindow">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -29,7 +29,7 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="titulo">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -51,10 +51,10 @@
      <string>TURNOS</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bottonnuevoturno">
+   <widget class="QPushButton" name="boton_nuevo_turno">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>240</x>
       <y>280</y>
       <width>101</width>
       <height>31</height>
@@ -104,6 +104,19 @@
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="boton_salir">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>280</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SALIR</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -118,8 +131,42 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>boton_salir</sender>
+   <signal>clicked()</signal>
+   <receiver>RecepcionistaMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>410</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_nuevo_turno</sender>
+   <signal>clicked()</signal>
+   <receiver>RecepcionistaMainWindow</receiver>
+   <slot>nuevoTurno()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>709</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>nuevoturno()</slot>
+  <slot>nuevoTurno()</slot>
+  <slot>salir()</slot>
  </slots>
 </ui>
