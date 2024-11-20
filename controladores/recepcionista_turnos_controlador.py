@@ -61,4 +61,4 @@ class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
         self.lineEdit_dni.clear()
         self.lineEdit_telefono.clear()
         self.lineEdit_obra_social.clear()
-        
+        self.lineEdit_nombre.setFocus()
