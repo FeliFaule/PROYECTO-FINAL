@@ -45,8 +45,7 @@ class Login(QMainWindow, Ui_LoginWindow):
                 usuario_verificado = next((fila for fila in usuarios if fila["nombre"] == user and fila["contrasena"] == password), None)
                 
                 if usuario_verificado:
-                    print(f"Encontrado: {usuario_verificado['nombre']} con password: {usuario_verificado['contrasena']} y Rol: {usuario_verificado['rol']}")
-
+                    
                     # Si tiene el rol MEDICO, abre la pantalla de atención de pacientes
                     if usuario_verificado["rol"] == 'MEDICO':
                         self.close()
