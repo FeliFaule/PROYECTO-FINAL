@@ -1,4 +1,6 @@
 import json
+import serial
+import time
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 from PyQt5.QtCore import pyqtSlot
 from interfaces.llamado_al_paciente import Ui_MainWindow
@@ -9,11 +11,12 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.cargar_turnos()
 
-    @pyqtSlot()
     def cargar_turnos(self):
         try:
             with open("datos/pacientes.json", "r") as file:
                 pacientes = json.load(file)
+                #contenido = json.load(file)
+                #pacientes = contenido["pacientes"]
 
             # Limpiar la tabla antes de insertar nuevos datos
             self.listado_turnos.setRowCount(0)  # Limpiar la tabla
@@ -30,7 +33,9 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
                 self.listado_turnos.setItem(row_position, 2, QTableWidgetItem(paciente["dni"]))
                 self.listado_turnos.setItem(row_position, 3, QTableWidgetItem(paciente["telefono"]))
                 self.listado_turnos.setItem(row_position, 4, QTableWidgetItem(paciente["obra_social"]))
-                self.listado_turnos.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_turno"]))
+                self.listado_turnos.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_hora"]))
+
+            self.listado_turnos.resizeColumnsToContents()
         
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de pacientes no se encontró.")
@@ -39,7 +44,6 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los pacientes: {e}")
 
-    @pyqtSlot()
     def llamar_paciente(self):
         # Aquí puedes definir la acción para llamar a un paciente.
         # Por ejemplo, obtener el nombre del paciente de la primera fila seleccionada.
@@ -50,7 +54,6 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         else:
             QMessageBox.warning(self, "Error", "Seleccione un turno para llamar.")
 
-    @pyqtSlot()
     def atender_paciente(self):
         # Aquí puedes definir la acción para atender al paciente.
         # Por ejemplo, obtener el nombre del paciente de la primera fila seleccionada.
@@ -61,7 +64,6 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         else:
             QMessageBox.warning(self, "Error", "Seleccione un turno para atender.")
 
-    @pyqtSlot()
     def ver_todos_pacientes(self):
         # Aquí puedes mostrar todos los pacientes en una nueva ventana o realizar cualquier acción adicional.
         self.cargar_turnos()  # Esto recarga la lista de pacientes en la tabla
