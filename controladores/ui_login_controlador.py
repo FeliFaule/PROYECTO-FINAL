@@ -2,6 +2,7 @@ import json
 from interfaces.ui_login import Ui_LoginWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 from controladores.recepcionista_historial_turnos_controlador import RecepcionistaWindow
+from controladores.llamado_al_paciente_controlador import AtencionPacienteWindow
 
 # TODA LA LOGICA DE LA VENTANA LOGIN
 
@@ -30,7 +31,10 @@ class Login(QMainWindow, Ui_LoginWindow):
 
                     # Si tiene el rol MEDICO, abre la pantalla de atención de pacientes
                     if usuario_verificado["rol"] == 'MEDICO':
-                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL MEDICO",QMessageBox.StandardButton.Close)
+                        self.close()
+                        self.llamado_al_paciente = AtencionPacienteWindow()
+                        self.llamado_al_paciente.show()
+
                     
                     # Si tiene el rol RECEPCION, abre la pantalla de recepción de pacientes
                     elif usuario_verificado["rol"] == 'RECEPCIONISTA':
