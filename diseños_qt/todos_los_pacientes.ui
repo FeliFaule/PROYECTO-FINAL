@@ -92,7 +92,57 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;PACIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="salir_boton_">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>310</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>salir_boton_</sender>
+   <signal>clicked()</signal>
+   <receiver>historialDePacientes</receiver>
+   <slot>salir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verHistorial_boton</sender>
+   <signal>clicked()</signal>
+   <receiver>historialDePacientes</receiver>
+   <slot>verHistorial()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>562</x>
+     <y>330</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>salir()</slot>
+  <slot>verHistorial()</slot>
+ </slots>
 </ui>
