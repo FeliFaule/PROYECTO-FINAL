@@ -5,3 +5,7 @@ class verPacientes(QDialog, Ui_historialDePacientes):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+    #def salir(self):
+    #return super().close()
+    
