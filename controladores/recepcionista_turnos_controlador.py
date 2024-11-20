@@ -19,7 +19,7 @@ class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
         dni = self.lineEdit_dni.text()
         telefono = self.lineEdit_telefono.text()
         obra_social = self.lineEdit_obra_social.text()
-        fecha_y_hora = datetime.now().strftime('%d-%m-%Y %H:%M')
+        fecha_hora = datetime.now().strftime('%d-%m-%Y %H:%M')
 
         # Validar que el DNI sea un número y que no esté vacío
         try:
@@ -35,7 +35,7 @@ class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
             "dni": dni,
             "telefono": telefono,
             "obra_social": obra_social,
-            "fecha_y_hora": fecha_y_hora
+            "fecha_hora": fecha_hora
         }
         
         # Leer el archivo JSON y agregar el nuevo turno
