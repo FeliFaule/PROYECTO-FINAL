@@ -32,7 +32,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>LISTADO DE TURNOS</string>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
@@ -55,7 +55,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>701</width>
+       <width>711</width>
        <height>441</height>
       </rect>
      </property>
@@ -94,10 +94,10 @@
     <widget class="QPushButton" name="boton_nuevo_turno">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>270</y>
+       <x>185</x>
+       <y>370</y>
        <width>131</width>
-       <height>51</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -119,22 +119,22 @@ QPushButton:hover {
     <widget class="QPushButton" name="boton_salir">
      <property name="geometry">
       <rect>
-       <x>390</x>
-       <y>270</y>
+       <x>385</x>
+       <y>370</y>
        <width>131</width>
-       <height>51</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton {
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-QPushButton:hover {
-    background-color: #2980b9;
-}</string>
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
      </property>
      <property name="text">
       <string>SALIR</string>
@@ -143,10 +143,10 @@ QPushButton:hover {
     <widget class="QTableWidget" name="tablaListaTurnos">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>47</x>
        <y>70</y>
-       <width>601</width>
-       <height>192</height>
+       <width>610</width>
+       <height>271</height>
       </rect>
      </property>
      <column>
@@ -181,16 +181,6 @@ QPushButton:hover {
      </column>
     </widget>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>705</width>
-     <height>20</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

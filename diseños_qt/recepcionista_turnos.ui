@@ -7,23 +7,23 @@
     <x>0</x>
     <y>0</y>
     <width>710</width>
-    <height>569</height>
+    <height>420</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>710</width>
-    <height>569</height>
+    <height>420</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>710</width>
-    <height>569</height>
+    <height>420</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>NUEVO TURNO</string>
   </property>
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
@@ -31,16 +31,16 @@
      <x>-1</x>
      <y>-1</y>
      <width>711</width>
-     <height>571</height>
+     <height>461</height>
     </rect>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_imagen">
     <property name="geometry">
      <rect>
       <x>-4</x>
-      <y>-6</y>
+      <y>0</y>
       <width>721</width>
-      <height>581</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="text">
@@ -53,55 +53,22 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QTextEdit" name="editobrasocial">
+   <widget class="QLabel" name="label_name">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>370</y>
-      <width>421</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="editnombre">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>90</y>
-      <width>421</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDateTimeEdit" name="Timeeditfecha">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>440</y>
-      <width>151</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="displayFormat">
-     <string>dd-MM-yyyy HH:mm</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>100</y>
-      <width>70</width>
-      <height>23</height>
+      <x>104</x>
+      <y>96</y>
+      <width>47</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
       <italic>true</italic>
-      <bold>true</bold>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
@@ -111,10 +78,10 @@
    <widget class="QPushButton" name="botosalir">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>510</y>
+      <x>55</x>
+      <y>342</y>
       <width>121</width>
-      <height>41</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -133,10 +100,10 @@ QPushButton:hover {
      <string>SALIR</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>247</x>
       <y>30</y>
       <width>179</width>
       <height>33</height>
@@ -158,10 +125,10 @@ QPushButton:hover {
    <widget class="QPushButton" name="botonguardar">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>510</y>
+      <x>535</x>
+      <y>342</y>
       <width>121</width>
-      <height>41</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -180,145 +147,153 @@ QPushButton:hover {
      <string>GUARDAR</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_lastname">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>170</y>
-      <width>92</width>
-      <height>23</height>
+      <x>104</x>
+      <y>140</y>
+      <width>63</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
       <italic>true</italic>
-      <bold>true</bold>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>APELLIDO</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="label_obra_social">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>450</y>
-      <width>59</width>
-      <height>23</height>
+      <x>103</x>
+      <y>273</y>
+      <width>86</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>FECHA</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>240</y>
-      <width>36</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>DNI</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="editapellido">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>160</y>
-      <width>421</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="editDNI">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>230</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>380</y>
-      <width>126</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>OBRA SOCIAL</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="edittelefono">
+   <widget class="QLabel" name="label_phone">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>300</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>310</y>
-      <width>92</width>
-      <height>23</height>
+      <x>104</x>
+      <y>229</y>
+      <width>63</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans Mono</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>TELEFONO</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_dni">
+    <property name="geometry">
+     <rect>
+      <x>104</x>
+      <y>183</y>
+      <width>24</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DNI</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_nombre">
+    <property name="geometry">
+     <rect>
+      <x>196</x>
+      <y>90</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_apellido">
+    <property name="geometry">
+     <rect>
+      <x>196</x>
+      <y>133</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_dni">
+    <property name="geometry">
+     <rect>
+      <x>197</x>
+      <y>176</y>
+      <width>230</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_telefono">
+    <property name="geometry">
+     <rect>
+      <x>197</x>
+      <y>220</y>
+      <width>230</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_obra_social">
+    <property name="geometry">
+     <rect>
+      <x>198</x>
+      <y>264</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_nombre</tabstop>
+  <tabstop>lineEdit_apellido</tabstop>
+  <tabstop>lineEdit_dni</tabstop>
+  <tabstop>lineEdit_telefono</tabstop>
+  <tabstop>lineEdit_obra_social</tabstop>
+  <tabstop>botonguardar</tabstop>
+  <tabstop>botosalir</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -337,5 +312,24 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>botonguardar</sender>
+   <signal>clicked()</signal>
+   <receiver>modalNuevoTurno</receiver>
+   <slot>guardarTurno()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>guardarTurno()</slot>
+ </slots>
 </ui>
