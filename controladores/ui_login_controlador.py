@@ -28,7 +28,7 @@ class Login(QMainWindow, Ui_LoginWindow):
                 
                 if usuario_verificado:
                     print(f"Encontrado: {usuario_verificado["nombre"]} con password: {usuario_verificado["contrasena"]} y Rol: {usuario_verificado["rol"]}")
-
+                    print(usuario_verificado)
                     # Si tiene el rol MEDICO, abre la pantalla de atención de pacientes
                     if usuario_verificado["rol"] == 'MEDICO':
                         self.close()
@@ -56,5 +56,3 @@ class Login(QMainWindow, Ui_LoginWindow):
             QMessageBox.critical(self, "Error", "El archivo de usuarios no se encontró.")
         except json.JSONDecodeError:
             QMessageBox.critical(self, "Error", "Error en el formato del archivo de usuarios.")
-        except Exception as e:
-            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los usuarios: {e}")

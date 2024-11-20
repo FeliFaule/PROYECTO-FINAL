@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuLlamado_al_paciente.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.pacientes_button.clicked.connect(MainWindow.verPacientes) # type: ignore
+        self.pacientes_button.clicked.connect(MainWindow.abrirInfoPacientes) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

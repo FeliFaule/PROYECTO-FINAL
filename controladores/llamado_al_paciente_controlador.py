@@ -4,6 +4,8 @@ import time
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 from PyQt5.QtCore import pyqtSlot
 from interfaces.llamado_al_paciente import Ui_MainWindow
+from .todos_los_pacientes_controlador import verPacientes
+
 
 class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -11,7 +13,9 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.cargar_turnos()
 
-    def cargar_turnos(self):
+
+
+    def cargar_turnos(self):    
         try:
             with open("datos/pacientes.json", "r") as file:
                 pacientes = json.load(file)
@@ -67,3 +71,12 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
     def ver_todos_pacientes(self):
         # Aquí puedes mostrar todos los pacientes en una nueva ventana o realizar cualquier acción adicional.
         self.cargar_turnos()  # Esto recarga la lista de pacientes en la tabla
+
+
+    def abrirInfoPacientes(self):
+        ventanaTurno = verPacientes()
+        ventanaTurno.exec_()
+        self.cargar_turnos()
+
+
+    
