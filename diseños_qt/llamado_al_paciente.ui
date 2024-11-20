@@ -177,5 +177,25 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pacientes_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>verPacientes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>692</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>485</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>verPacientes()</slot>
+ </slots>
 </ui>
