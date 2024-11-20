@@ -23,7 +23,7 @@ class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
 
         # Validar que el DNI sea un número y que no esté vacío
         try:
-            dni = int(dni)
+            is_number = int(dni)
         except ValueError:
             QtWidgets.QMessageBox.warning(self, 'Error', 'El DNI debe ser un número válido.')
             return
