@@ -56,7 +56,7 @@
        <x>0</x>
        <y>0</y>
        <width>701</width>
-       <height>421</height>
+       <height>441</height>
       </rect>
      </property>
      <property name="text">
@@ -172,7 +172,40 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>boton_nuevo_turno</sender>
+   <signal>clicked()</signal>
+   <receiver>RecepcionistaMainWindow</receiver>
+   <slot>nuevoTurno()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_salir</sender>
+   <signal>clicked()</signal>
+   <receiver>RecepcionistaMainWindow</receiver>
+   <slot>salir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>410</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>nuevoTurno()</slot>
   <slot>salir()</slot>

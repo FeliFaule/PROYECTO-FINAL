@@ -31,9 +31,9 @@ class Ui_RecepcionistaMainWindow(object):
         self.widget.setGeometry(QtCore.QRect(0, 0, 701, 431))
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
-        self.label.setGeometry(QtCore.QRect(0, 0, 701, 421))
+        self.label.setGeometry(QtCore.QRect(0, 0, 701, 441))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.titulo = QtWidgets.QLabel(self.widget)
@@ -79,6 +79,8 @@ class Ui_RecepcionistaMainWindow(object):
         RecepcionistaMainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(RecepcionistaMainWindow)
+        self.boton_nuevo_turno.clicked.connect(RecepcionistaMainWindow.nuevoTurno) # type: ignore
+        self.boton_salir.clicked.connect(RecepcionistaMainWindow.salir) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(RecepcionistaMainWindow)
 
     def retranslateUi(self, RecepcionistaMainWindow):
