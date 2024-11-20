@@ -1,6 +1,6 @@
 import json
 from interfaces.ui_login import Ui_LoginWindow
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QCheckBox, QLineEdit
 from controladores.recepcionista_historial_turnos_controlador import RecepcionistaWindow
 from controladores.llamado_al_paciente_controlador import AtencionPacienteWindow
 
@@ -10,7 +10,26 @@ class Login(QMainWindow, Ui_LoginWindow):
     def __init__(self):  # Constructor de la clase Login
         super().__init__()  # Llama al constructor de QMainWindow, inicializando la ventana
         self.setupUi(self)  # Llama a setupUi correctamente, pasándole la instancia de 'self' (Login)
-        self.login_button.clicked.connect(self.login)  # Conectar el botón al slot 'login'    
+        
+        # Configurar QLineEdit para ocultar la contraseña por defecto
+        self.password_data.setEchoMode(QLineEdit.Password)
+        
+        # Crear y configurar un checkbox para alternar visibilidad de la contraseña
+        self.show_password_checkbox = QCheckBox("Mostrar contraseña", self)
+        self.show_password_checkbox.setGeometry(self.password_data.geometry().x(), 
+                                                self.password_data.geometry().y() + 40, 
+                                                150, 20)
+        self.show_password_checkbox.stateChanged.connect(self.toggle_password_visibility)
+
+        # Conectar el botón de login al método correspondiente
+        self.login_button.clicked.connect(self.login)
+
+    def toggle_password_visibility(self):
+        """Alternar entre mostrar y ocultar la contraseña."""
+        if self.show_password_checkbox.isChecked():
+            self.password_data.setEchoMode(QLineEdit.Normal)  # Mostrar texto
+        else:
+            self.password_data.setEchoMode(QLineEdit.Password)  # Ocultar texto
 
     def login(self):
         file_path = 'datos/usuarios.json'     
@@ -27,8 +46,8 @@ class Login(QMainWindow, Ui_LoginWindow):
                 usuario_verificado = next((fila for fila in usuarios if fila["nombre"] == user and fila["contrasena"] == password), None)
                 
                 if usuario_verificado:
-                    print(f"Encontrado: {usuario_verificado["nombre"]} con password: {usuario_verificado["contrasena"]} y Rol: {usuario_verificado["rol"]}")
-                    print(usuario_verificado)
+                    print(f"Encontrado: {usuario_verificado['nombre']} con password: {usuario_verificado['contrasena']} y Rol: {usuario_verificado['rol']}")
+
                     # Si tiene el rol MEDICO, abre la pantalla de atención de pacientes
                     if usuario_verificado["rol"] == 'MEDICO':
                         self.close()
@@ -41,18 +60,17 @@ class Login(QMainWindow, Ui_LoginWindow):
                         self.close()
                         self.recepcionista_turnos = RecepcionistaWindow()
                         self.recepcionista_turnos.show()
-#                        QMessageBox.information(self, "OK", f"ABRIR PANTALLA DEL RECEPCIONISTA",QMessageBox.StandardButton.Close)
                     
                     # Si el rol no existe, debe informar que el usuario no tiene especificado un ROL válido.
                     else:
                         QMessageBox.critical(self, "Error", f"El usuario {user} no tiene un ROL válido. Contacta al administrador",QMessageBox.StandardButton.Close)
 
-
                 else:
-                    QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos",QMessageBox.StandardButton.Retry,QMessageBox.StandardButton.Retry)
-
+                    QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos",QMessageBox.StandardButton.Retry)
 
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de usuarios no se encontró.")
         except json.JSONDecodeError:
             QMessageBox.critical(self, "Error", "Error en el formato del archivo de usuarios.")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los usuarios: {e}")

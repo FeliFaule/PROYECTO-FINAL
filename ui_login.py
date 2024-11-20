@@ -26,7 +26,7 @@ class Ui_LoginWindow(object):
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(0, 10, 431, 281))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("../../../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.password_label = QtWidgets.QLabel(self.widget)
@@ -43,7 +43,7 @@ class Ui_LoginWindow(object):
         self.title.setFont(font)
         self.title.setObjectName("title")
         self.login_button = QtWidgets.QPushButton(self.widget)
-        self.login_button.setGeometry(QtCore.QRect(110, 200, 121, 31))
+        self.login_button.setGeometry(QtCore.QRect(110, 180, 121, 31))
         self.login_button.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -68,6 +68,9 @@ class Ui_LoginWindow(object):
         self.password_data.setText("")
         self.password_data.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.password_data.setObjectName("password_data")
+        self.checkBox = QtWidgets.QCheckBox(self.widget)
+        self.checkBox.setGeometry(QtCore.QRect(250, 180, 161, 21))
+        self.checkBox.setObjectName("checkBox")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 416, 20))
@@ -87,4 +90,5 @@ class Ui_LoginWindow(object):
         self.title.setText(_translate("LoginWindow", "IDENTIFICACION"))
         self.login_button.setText(_translate("LoginWindow", "Iniciar Sesion"))
         self.user_label.setText(_translate("LoginWindow", "Usuario:"))
+        self.checkBox.setText(_translate("LoginWindow", "CheckBox"))
         self.menuLOGIN.setTitle(_translate("LoginWindow", "LOGIN"))
