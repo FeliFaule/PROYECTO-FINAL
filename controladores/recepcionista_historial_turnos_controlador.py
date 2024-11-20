@@ -7,31 +7,31 @@ class RecepcionistaWindow(QMainWindow, Ui_RecepcionistaMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.cargar_pacientes()
+        self.cargarTurnos()
 
     
-    def cargar_pacientes(self):
+    def cargarTurnos(self):
         try:
-            with open("datos/pacientes.json", "r") as archivo:
+            with open("datos/turnos.json", "r") as archivo:
                 contenido = json.load(archivo)
-                pacientes = contenido["pacientes"]
+                turnos = contenido["turno"]
 
             # Limpiar la tabla antes de insertar nuevos datos
             self.tablaListaTurnos.setRowCount(0)  # Limpiar la tabla
 
-            # Insertar los datos de los pacientes en la tabla
-            for paciente in pacientes:
+            # Insertar los datos de los turnos en la tabla
+            for turno in turnos:
                 # Agregar una nueva fila en la tabla
                 row_position = self.tablaListaTurnos.rowCount()
                 self.tablaListaTurnos.insertRow(row_position)
 
                 # Insertar los datos del paciente en las celdas correspondientes
-                self.tablaListaTurnos.setItem(row_position, 0, QTableWidgetItem(paciente["nombre"]))
-                self.tablaListaTurnos.setItem(row_position, 1, QTableWidgetItem(paciente["apellido"]))
-                self.tablaListaTurnos.setItem(row_position, 2, QTableWidgetItem(paciente["dni"]))
-                self.tablaListaTurnos.setItem(row_position, 3, QTableWidgetItem(paciente["telefono"]))
-                self.tablaListaTurnos.setItem(row_position, 4, QTableWidgetItem(paciente["obra_social"]))
-                self.tablaListaTurnos.setItem(row_position, 5, QTableWidgetItem(paciente["fecha_hora"]))
+                self.tablaListaTurnos.setItem(row_position, 0, QTableWidgetItem(turno["nombre"]))
+                self.tablaListaTurnos.setItem(row_position, 1, QTableWidgetItem(turno["apellido"]))
+                self.tablaListaTurnos.setItem(row_position, 2, QTableWidgetItem(turno["dni"]))
+                self.tablaListaTurnos.setItem(row_position, 3, QTableWidgetItem(turno["telefono"]))
+                self.tablaListaTurnos.setItem(row_position, 4, QTableWidgetItem(turno["obra_social"]))
+                self.tablaListaTurnos.setItem(row_position, 5, QTableWidgetItem(turno["fecha_hora"]))
             
             self.tablaListaTurnos.resizeColumnsToContents()
             
@@ -48,4 +48,4 @@ class RecepcionistaWindow(QMainWindow, Ui_RecepcionistaMainWindow):
     def nuevoTurno(self):
         ventanaTurno = VentanaNuevoTurno()
         ventanaTurno.exec_()
-        self.cargar_pacientes()
+        self.cargarTurnos()
