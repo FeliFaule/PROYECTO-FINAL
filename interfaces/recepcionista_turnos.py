@@ -23,7 +23,7 @@ class Ui_modalNuevoTurno(object):
         self.label_imagen = QtWidgets.QLabel(self.widget)
         self.label_imagen.setGeometry(QtCore.QRect(-4, 0, 721, 461))
         self.label_imagen.setText("")
-        self.label_imagen.setPixmap(QtGui.QPixmap("../diseños_qt/../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label_imagen.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
         self.label_imagen.setScaledContents(True)
         self.label_imagen.setObjectName("label_imagen")
         self.label_name = QtWidgets.QLabel(self.widget)
