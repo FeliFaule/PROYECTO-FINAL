@@ -38,9 +38,9 @@ class RecepcionistaWindow(QMainWindow, Ui_RecepcionistaMainWindow):
         except FileNotFoundError:
             QMessageBox.critical(self, "Error", "El archivo de pacientes no se encontró.")
         except json.JSONDecodeError:
-            QMessageBox.critical(self, "Error", "Error en el formato del archivo de pacientes.")
+            QMessageBox.critical(self, "Error", "Error en el formato del archivo de turnos.")
         except Exception as e:
-            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los pacientes: {e}")
+            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los turnos: {e}")
 
     def salir(self):
         return super().close()
