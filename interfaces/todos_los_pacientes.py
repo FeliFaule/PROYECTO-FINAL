@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_historialDePacientes(object):
     def setupUi(self, historialDePacientes):
         historialDePacientes.setObjectName("historialDePacientes")
-        historialDePacientes.resize(627, 389)
+        historialDePacientes.resize(627, 512)
         self.verHistorial_boton = QtWidgets.QPushButton(historialDePacientes)
         self.verHistorial_boton.setGeometry(QtCore.QRect(530, 310, 81, 23))
         self.verHistorial_boton.setObjectName("verHistorial_boton")
@@ -47,8 +47,13 @@ class Ui_historialDePacientes(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
+        self.salir_boton_ = QtWidgets.QPushButton(historialDePacientes)
+        self.salir_boton_.setGeometry(QtCore.QRect(440, 310, 80, 23))
+        self.salir_boton_.setObjectName("salir_boton_")
 
         self.retranslateUi(historialDePacientes)
+        self.salir_boton_.clicked.connect(historialDePacientes.salir) # type: ignore
+        self.verHistorial_boton.clicked.connect(historialDePacientes.verHistorial) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(historialDePacientes)
 
     def retranslateUi(self, historialDePacientes):
@@ -68,3 +73,4 @@ class Ui_historialDePacientes(object):
         item = self.tableWidget.horizontalHeaderItem(5)
         item.setText(_translate("historialDePacientes", "FECHA Y HORA"))
         self.label.setText(_translate("historialDePacientes", "<html><head/><body><p><span style=\" font-size:26pt;\">PACIENTES</span></p></body></html>"))
+        self.salir_boton_.setText(_translate("historialDePacientes", "Salir"))
