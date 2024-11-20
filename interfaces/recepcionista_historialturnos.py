@@ -47,10 +47,38 @@ class Ui_RecepcionistaMainWindow(object):
         self.titulo.setFont(font)
         self.titulo.setObjectName("titulo")
         self.boton_nuevo_turno = QtWidgets.QPushButton(self.widget)
-        self.boton_nuevo_turno.setGeometry(QtCore.QRect(240, 270, 101, 31))
+        self.boton_nuevo_turno.setGeometry(QtCore.QRect(190, 270, 131, 51))
+        self.boton_nuevo_turno.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}\n"
+"")
         self.boton_nuevo_turno.setObjectName("boton_nuevo_turno")
         self.boton_salir = QtWidgets.QPushButton(self.widget)
-        self.boton_salir.setGeometry(QtCore.QRect(360, 270, 101, 31))
+        self.boton_salir.setGeometry(QtCore.QRect(390, 270, 131, 51))
+        self.boton_salir.setStyleSheet("QPushButton {\n"
+"\n"
+"    background-color: #3498db;\n"
+"\n"
+"    color: white;\n"
+"\n"
+"    border-radius: 5px;\n"
+"\n"
+"    padding: 5px 10px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"\n"
+"    background-color: #2980b9;\n"
+"\n"
+"}\n"
+"")
         self.boton_salir.setObjectName("boton_salir")
         self.tablaListaTurnos = QtWidgets.QTableWidget(self.widget)
         self.tablaListaTurnos.setGeometry(QtCore.QRect(50, 70, 601, 192))
