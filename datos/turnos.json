@@ -1,28 +1,20 @@
 {
     "turno": [
         {
-            "nombre": "Pancho",
-            "apellido": "Conejero",
-            "dni": 47908145,
-            "telefono": "3517777778",
+            "nombre": "Felipe",
+            "apellido": "Faule",
+            "dni": "47708195",
+            "telefono": "3517560308",
             "obra_social": "OSDE",
-            "fecha_hora": "2024-11-11 17:00:00"
+            "fecha_hora": "20-11-2024 23:31"
         },
         {
             "nombre": "Bruno",
             "apellido": "Faule",
-            "dni": 43625453,
-            "telefono": "3517777777",
+            "dni": "35687263",
+            "telefono": "3517863476",
             "obra_social": "OSDE",
-            "fecha_hora": "2024-11-11 17:10:00"
-        },
-        {
-            "nombre": "Carlos",
-            "apellido": "Martínez",
-            "dni": 40000000,
-            "telefono": "3511234567",
-            "obra_social": "OSDE",
-            "fecha_hora": "2024-11-11 17:20:00"
+            "fecha_hora": "20-11-2024 23:32"
         }
     ]
 }
