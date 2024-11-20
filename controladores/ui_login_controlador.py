@@ -10,14 +10,13 @@ class Login(QMainWindow, Ui_LoginWindow):
     def __init__(self):  # Constructor de la clase Login
         super().__init__()  # Llama al constructor de QMainWindow, inicializando la ventana
         self.setupUi(self)  # Llama a setupUi correctamente, pasándole la instancia de 'self' (Login)
-        
         # Configurar QLineEdit para ocultar la contraseña por defecto
         self.password_data.setEchoMode(QLineEdit.Password)
         
         # Crear y configurar un checkbox para alternar visibilidad de la contraseña
         self.show_password_checkbox = QCheckBox("Mostrar contraseña", self)
         self.show_password_checkbox.setGeometry(self.password_data.geometry().x(), 
-                                                self.password_data.geometry().y() + 40, 
+                                                self.password_data.geometry().y() + 20, 
                                                 150, 20)
         self.show_password_checkbox.stateChanged.connect(self.toggle_password_visibility)
 
