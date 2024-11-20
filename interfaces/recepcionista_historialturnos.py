@@ -33,7 +33,7 @@ class Ui_RecepcionistaMainWindow(object):
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(0, 0, 701, 441))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.titulo = QtWidgets.QLabel(self.widget)

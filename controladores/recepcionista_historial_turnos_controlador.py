@@ -42,7 +42,7 @@ class RecepcionistaWindow(QMainWindow, Ui_RecepcionistaMainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los pacientes: {e}")
 
-    def close(self):
+    def salir(self):
         return super().close()
     
     def nuevoTurno(self):
