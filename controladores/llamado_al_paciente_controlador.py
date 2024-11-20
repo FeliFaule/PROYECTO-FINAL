@@ -12,7 +12,7 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
     @pyqtSlot()
     def cargar_turnos(self):
         try:
-            with open("pacientes.json", "r") as file:
+            with open("datos/pacientes.json", "r") as file:
                 pacientes = json.load(file)
 
             # Limpiar la tabla antes de insertar nuevos datos

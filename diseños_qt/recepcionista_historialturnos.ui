@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1420</width>
-    <height>850</height>
+    <width>705</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,6 +18,18 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>705</width>
+    <height>457</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>705</width>
+    <height>457</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -29,93 +41,122 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="titulo">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>20</y>
-      <width>100</width>
-      <height>34</height>
+      <x>0</x>
+      <y>0</y>
+      <width>701</width>
+      <height>431</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Ubuntu Mono</family>
-      <pointsize>22</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>TURNOS</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="boton_nuevo_turno">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>280</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>NUEVO TURNO</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tablaListaTurnos">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>80</y>
-      <width>601</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <column>
-     <property name="text">
-      <string>APELLIDO</string>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>701</width>
+       <height>421</height>
+      </rect>
      </property>
-    </column>
-    <column>
      <property name="text">
-      <string>NOMBRE</string>
+      <string/>
      </property>
-    </column>
-    <column>
+     <property name="pixmap">
+      <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="titulo">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>20</y>
+       <width>100</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Ubuntu Mono</family>
+       <pointsize>22</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
-      <string>DNI</string>
+      <string>TURNOS</string>
      </property>
-    </column>
-    <column>
+    </widget>
+    <widget class="QPushButton" name="boton_nuevo_turno">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>270</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>TELEFONO</string>
+      <string>NUEVO TURNO</string>
      </property>
-    </column>
-    <column>
+    </widget>
+    <widget class="QPushButton" name="boton_salir">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>270</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>OBRA SOCIAL</string>
+      <string>SALIR</string>
      </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>FECHA Y HORA</string>
+    </widget>
+    <widget class="QTableWidget" name="tablaListaTurnos">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>601</width>
+       <height>192</height>
+      </rect>
      </property>
-    </column>
-   </widget>
-   <widget class="QPushButton" name="boton_salir">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>280</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SALIR</string>
-    </property>
+     <column>
+      <property name="text">
+       <string>APELLIDO</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>NOMBRE</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>DNI</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>TELEFONO</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>OBRA SOCIAL</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>FECHA Y HORA</string>
+      </property>
+     </column>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -123,7 +164,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1420</width>
+     <width>705</width>
      <height>20</height>
     </rect>
    </property>
@@ -131,40 +172,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>boton_salir</sender>
-   <signal>clicked()</signal>
-   <receiver>RecepcionistaMainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>410</x>
-     <y>315</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>709</x>
-     <y>424</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>boton_nuevo_turno</sender>
-   <signal>clicked()</signal>
-   <receiver>RecepcionistaMainWindow</receiver>
-   <slot>nuevoTurno()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>290</x>
-     <y>315</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>709</x>
-     <y>424</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <slots>
   <slot>nuevoTurno()</slot>
   <slot>salir()</slot>
