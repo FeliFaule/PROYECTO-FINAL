@@ -9,7 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QPixmap
 
 
 class Ui_LoginWindow(object):
@@ -67,6 +66,7 @@ class Ui_LoginWindow(object):
         self.password_data = QtWidgets.QLineEdit(self.widget)
         self.password_data.setGeometry(QtCore.QRect(110, 140, 201, 23))
         self.password_data.setText("")
+        self.password_data.setEchoMode(QtWidgets.QLineEdit.PasswordEchoOnEdit)
         self.password_data.setObjectName("password_data")
         LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
