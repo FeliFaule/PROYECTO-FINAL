@@ -47,7 +47,7 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los pacientes: {e}")
 
-    def llamar_paciente(self):
+    def llamarPaciente(self):
         # Aquí puedes definir la acción para llamar a un paciente.
         # Por ejemplo, obtener el nombre del paciente de la primera fila seleccionada.
         row = self.listado_turnos.currentRow()
@@ -57,7 +57,7 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         else:
             QMessageBox.warning(self, "Error", "Seleccione un turno para llamar.")
 
-    def atender_paciente(self):
+    def atenderPaciente(self):
         # Aquí puedes definir la acción para atender al paciente.
         # Por ejemplo, obtener el nombre del paciente de la primera fila seleccionada.
         row = self.listado_turnos.currentRow()
@@ -73,6 +73,15 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
         ventanaTurno = verPacientes()
         ventanaTurno.exec_()
         self.cargarTurnos()
+
+
+    def salir(self):
+        return super().close()
+    
+
+
+
+
 
 
     
