@@ -7,123 +7,172 @@
     <x>0</x>
     <y>0</y>
     <width>627</width>
-    <height>512</height>
+    <height>399</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>627</width>
+    <height>399</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>627</width>
+    <height>399</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="verHistorial_boton">
+  <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>310</y>
-     <width>81</width>
-     <height>23</height>
+     <x>0</x>
+     <y>-50</y>
+     <width>644</width>
+     <height>471</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Ver Historial</string>
-   </property>
-  </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>80</y>
-     <width>601</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <column>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>626</width>
+      <height>411</height>
+     </rect>
+    </property>
     <property name="text">
-     <string>NOMBRE</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>190</width>
+      <height>42</height>
+     </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <family>DejaVu Sans Mono</family>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
      </font>
     </property>
-   </column>
-   <column>
     <property name="text">
-     <string>APELLIDO</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;PACIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
-   </column>
-   <column>
+   </widget>
+   <widget class="QPushButton" name="salir_boton_">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>381</y>
+      <width>141</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+    </property>
     <property name="text">
-     <string>DNI</string>
+     <string>Salir</string>
     </property>
-   </column>
-   <column>
+   </widget>
+   <widget class="QPushButton" name="verHistorial_boton">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>381</y>
+      <width>141</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+    </property>
     <property name="text">
-     <string>TELEFONO</string>
+     <string>Ver Historial</string>
     </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>OBRA SOCIAL</string>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>601</width>
+      <height>221</height>
+     </rect>
     </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>FECHA Y HORA</string>
-    </property>
-   </column>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>30</y>
-     <width>190</width>
-     <height>42</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>DejaVu Sans Mono</family>
-     <weight>75</weight>
-     <italic>true</italic>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;PACIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="salir_boton_">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>310</y>
-     <width>80</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Salir</string>
-   </property>
+    <column>
+     <property name="text">
+      <string>NOMBRE</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>APELLIDO</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>DNI</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>TELEFONO</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>OBRA SOCIAL</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>FECHA Y HORA</string>
+     </property>
+    </column>
+   </widget>
   </widget>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>salir_boton_</sender>
-   <signal>clicked()</signal>
-   <receiver>historialDePacientes</receiver>
-   <slot>salir()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>465</x>
-     <y>318</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>429</x>
-     <y>359</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>verHistorial_boton</sender>
    <signal>clicked()</signal>
@@ -131,12 +180,28 @@
    <slot>verHistorial()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>562</x>
-     <y>330</y>
+     <x>850</x>
+     <y>485</y>
     </hint>
     <hint type="destinationlabel">
-     <x>522</x>
-     <y>367</y>
+     <x>313</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>salir_boton_</sender>
+   <signal>clicked()</signal>
+   <receiver>historialDePacientes</receiver>
+   <slot>salir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>700</x>
+     <y>485</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>313</x>
+     <y>199</y>
     </hint>
    </hints>
   </connection>
