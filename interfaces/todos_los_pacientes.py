@@ -23,7 +23,7 @@ class Ui_historialDePacientes(object):
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(0, 50, 626, 411))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.widget)
