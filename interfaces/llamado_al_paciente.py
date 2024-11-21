@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'llamado_al_paciente.ui'
+# Form implementation generated from reading ui file '../diseños_qt/llamado_al_paciente.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -14,35 +14,63 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(850, 600)
+        MainWindow.resize(850, 470)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(850, 600))
-        MainWindow.setMaximumSize(QtCore.QSize(850, 600))
+        MainWindow.setMinimumSize(QtCore.QSize(850, 470))
+        MainWindow.setMaximumSize(QtCore.QSize(850, 470))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.title_label = QtWidgets.QLabel(self.centralwidget)
-        self.title_label.setGeometry(QtCore.QRect(210, 10, 421, 42))
-        font = QtGui.QFont()
-        font.setFamily("DejaVu Sans Mono")
-        font.setPointSize(26)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.title_label.setFont(font)
-        self.title_label.setObjectName("title_label")
-        self.line = QtWidgets.QFrame(self.centralwidget)
-        self.line.setGeometry(QtCore.QRect(-10, 25, 881, 61))
-        self.line.setLineWidth(1)
-        self.line.setMidLineWidth(0)
-        self.line.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-        self.listado_turnos = QtWidgets.QTableWidget(self.centralwidget)
-        self.listado_turnos.setGeometry(QtCore.QRect(0, 60, 841, 311))
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setGeometry(QtCore.QRect(-11, -11, 881, 631))
+        self.widget.setObjectName("widget")
+        self.label = QtWidgets.QLabel(self.widget)
+        self.label.setGeometry(QtCore.QRect(-10, 0, 871, 631))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.salir_boton = QtWidgets.QPushButton(self.widget)
+        self.salir_boton.setGeometry(QtCore.QRect(25, 400, 141, 30))
+        self.salir_boton.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+        self.salir_boton.setObjectName("salir_boton")
+        self.atender_boton = QtWidgets.QPushButton(self.widget)
+        self.atender_boton.setGeometry(QtCore.QRect(425, 400, 141, 30))
+        self.atender_boton.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+        self.atender_boton.setObjectName("atender_boton")
+        self.llamar_boton = QtWidgets.QPushButton(self.widget)
+        self.llamar_boton.setGeometry(QtCore.QRect(275, 400, 141, 30))
+        self.llamar_boton.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+        self.llamar_boton.setObjectName("llamar_boton")
+        self.listado_turnos = QtWidgets.QTableWidget(self.widget)
+        self.listado_turnos.setGeometry(QtCore.QRect(15, 70, 841, 311))
         self.listado_turnos.setObjectName("listado_turnos")
         self.listado_turnos.setColumnCount(6)
         self.listado_turnos.setRowCount(0)
@@ -61,35 +89,46 @@ class Ui_MainWindow(object):
         self.listado_turnos.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.listado_turnos.setHorizontalHeaderItem(5, item)
-        self.llamar_button = QtWidgets.QPushButton(self.centralwidget)
-        self.llamar_button.setGeometry(QtCore.QRect(20, 390, 141, 51))
-        self.llamar_button.setObjectName("llamar_button")
-        self.atender_button = QtWidgets.QPushButton(self.centralwidget)
-        self.atender_button.setGeometry(QtCore.QRect(180, 390, 141, 51))
-        self.atender_button.setObjectName("atender_button")
-        self.pacientes_button = QtWidgets.QPushButton(self.centralwidget)
-        self.pacientes_button.setGeometry(QtCore.QRect(650, 390, 191, 51))
-        self.pacientes_button.setObjectName("pacientes_button")
+        self.title_label = QtWidgets.QLabel(self.widget)
+        self.title_label.setGeometry(QtCore.QRect(225, 20, 421, 42))
+        font = QtGui.QFont()
+        font.setFamily("DejaVu Sans Mono")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setItalic(True)
+        font.setWeight(75)
+        self.title_label.setFont(font)
+        self.title_label.setObjectName("title_label")
+        self.pacientes_boton = QtWidgets.QPushButton(self.widget)
+        self.pacientes_boton.setGeometry(QtCore.QRect(664, 400, 180, 30))
+        self.pacientes_boton.setStyleSheet("QPushButton {\n"
+"    background-color: #3498db;\n"
+"    color: white;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #2980b9;\n"
+"}")
+        self.pacientes_boton.setObjectName("pacientes_boton")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 20))
-        self.menubar.setObjectName("menubar")
-        self.menuLlamado_al_paciente = QtWidgets.QMenu(self.menubar)
-        self.menuLlamado_al_paciente.setObjectName("menuLlamado_al_paciente")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.menubar.addAction(self.menuLlamado_al_paciente.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.pacientes_button.clicked.connect(MainWindow.abrirInfoPacientes) # type: ignore
+        self.atender_boton.clicked.connect(MainWindow.atenderPaciente) # type: ignore
+        self.pacientes_boton.clicked.connect(MainWindow.abrirInfoPacientes) # type: ignore
+        self.salir_boton.clicked.connect(MainWindow.salir) # type: ignore
+        self.llamar_boton.clicked.connect(MainWindow.llamarPaciente) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.title_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">ATENCION AL PACIENTE</p></body></html>"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "ATENCION AL PACIENTE"))
+        self.salir_boton.setText(_translate("MainWindow", "Salir"))
+        self.atender_boton.setText(_translate("MainWindow", "Atender"))
+        self.llamar_boton.setText(_translate("MainWindow", "Llamar"))
         item = self.listado_turnos.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "NOMBRE"))
         item = self.listado_turnos.horizontalHeaderItem(1)
@@ -102,7 +141,5 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "OBRA SOCIAL"))
         item = self.listado_turnos.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "FECHA Y HORA"))
-        self.llamar_button.setText(_translate("MainWindow", "Llamar"))
-        self.atender_button.setText(_translate("MainWindow", "Atender"))
-        self.pacientes_button.setText(_translate("MainWindow", "Ver todos los pacientes"))
-        self.menuLlamado_al_paciente.setTitle(_translate("MainWindow", "Llamado al paciente"))
+        self.title_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">PACIENTES EN ESPERA</p></body></html>"))
+        self.pacientes_boton.setText(_translate("MainWindow", "Ver todos los pacientes"))

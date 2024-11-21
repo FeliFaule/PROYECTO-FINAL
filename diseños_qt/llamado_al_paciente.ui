@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>850</width>
-    <height>600</height>
+    <height>470</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,183 +19,285 @@
   <property name="minimumSize">
    <size>
     <width>850</width>
-    <height>600</height>
+    <height>470</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>850</width>
-    <height>600</height>
+    <height>470</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>ATENCION AL PACIENTE</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="title_label">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>10</y>
-      <width>421</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <pointsize>26</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ATENCION AL PACIENTE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>25</y>
+      <x>-11</x>
+      <y>-11</y>
       <width>881</width>
-      <height>61</height>
+      <height>631</height>
      </rect>
     </property>
-    <property name="lineWidth">
-     <number>1</number>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="listado_turnos">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>60</y>
-      <width>841</width>
-      <height>311</height>
-     </rect>
-    </property>
-    <column>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>0</y>
+       <width>871</width>
+       <height>631</height>
+      </rect>
+     </property>
      <property name="text">
-      <string>NOMBRE</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="salir_boton">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>400</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+     </property>
+     <property name="text">
+      <string>Salir</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="atender_boton">
+     <property name="geometry">
+      <rect>
+       <x>425</x>
+       <y>400</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+     </property>
+     <property name="text">
+      <string>Atender</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="llamar_boton">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>400</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+     </property>
+     <property name="text">
+      <string>Llamar</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="listado_turnos">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>70</y>
+       <width>841</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string>NOMBRE</string>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>true</kerning>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>APELLIDO</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>DNI</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>TELEFONO</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>OBRA SOCIAL</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>FECHA Y HORA</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="title_label">
+     <property name="geometry">
+      <rect>
+       <x>225</x>
+       <y>20</y>
+       <width>421</width>
+       <height>42</height>
+      </rect>
      </property>
      <property name="font">
       <font>
-       <kerning>true</kerning>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>26</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
       </font>
      </property>
-    </column>
-    <column>
      <property name="text">
-      <string>APELLIDO</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;PACIENTES EN ESPERA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
-    </column>
-    <column>
+    </widget>
+    <widget class="QPushButton" name="pacientes_boton">
+     <property name="geometry">
+      <rect>
+       <x>664</x>
+       <y>400</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}</string>
+     </property>
      <property name="text">
-      <string>DNI</string>
+      <string>Ver todos los pacientes</string>
      </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>TELEFONO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>OBRA SOCIAL</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>FECHA Y HORA</string>
-     </property>
-    </column>
+    </widget>
    </widget>
-   <widget class="QPushButton" name="llamar_button">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>390</y>
-      <width>141</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Llamar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="atender_button">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>390</y>
-      <width>141</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Atender</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pacientes_button">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>390</y>
-      <width>191</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ver todos los pacientes</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>850</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuLlamado_al_paciente">
-    <property name="title">
-     <string>Llamado al paciente</string>
-    </property>
-   </widget>
-   <addaction name="menuLlamado_al_paciente"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pacientes_button</sender>
+   <sender>atender_boton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>verPacientes()</slot>
+   <slot>atenderPaciente()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>692</x>
-     <y>452</y>
+     <x>1059</x>
+     <y>713</y>
     </hint>
     <hint type="destinationlabel">
-     <x>728</x>
-     <y>485</y>
+     <x>424</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pacientes_boton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>abrirInfoPacientes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1324</x>
+     <y>713</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>salir_boton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>salir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>713</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>llamar_boton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>llamarPaciente()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>909</x>
+     <y>713</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>234</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>verPacientes()</slot>
+  <slot>abrirInfoPacientes()</slot>
+  <slot>atenderPaciente()</slot>
+  <slot>llamarPaciente()</slot>
+  <slot>salir()</slot>
  </slots>
 </ui>
