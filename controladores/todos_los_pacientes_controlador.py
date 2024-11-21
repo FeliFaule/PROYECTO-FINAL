@@ -9,3 +9,5 @@ class verPacientes(QDialog, Ui_historialDePacientes):
     def salir(self):
         return super().close()
     
+    def verHistorial(self):
+        pass
