@@ -5,6 +5,7 @@ import json
 from clases.class_paciente import Paciente
 from clases.class_turno import Turno
 from datetime import datetime
+from controladores.recetas_controlador import creacionReceta
 import os
 
 
@@ -146,4 +147,5 @@ class AtencionPaciente(QDialog, Ui_atencionalpaciente):
 
     
     def Recetar(self):
-        pass
+        receta = creacionReceta(self.label_dato_dni.text())
+        receta.exec_()
