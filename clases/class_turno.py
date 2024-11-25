@@ -68,7 +68,8 @@ class Turno ():
         
         # Nos quedamos con la estructura de todos los turnos que no coincidan con la fecha y DNI.
         turnos = [turno for turno in turnos if turno["dni"] != dni or turno["fecha_hora"] != fecha_hora]
-
+        data["turno"] = turnos
+        
         # Guardar los datos actualizados de vuelta al archivo JSON
         with open("datos/turnos.json", "w") as archivo:
             json.dump(data, archivo, indent=4)        
