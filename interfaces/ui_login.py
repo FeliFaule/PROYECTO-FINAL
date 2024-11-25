@@ -26,7 +26,7 @@ class Ui_LoginWindow(object):
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(0, 10, 431, 281))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("IMAGENES/background_image.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.password_label = QtWidgets.QLabel(self.widget)
@@ -55,6 +55,8 @@ class Ui_LoginWindow(object):
 "}\n"
 "\n"
 "")
+        self.login_button.setAutoDefault(True)
+        self.login_button.setDefault(True)
         self.login_button.setObjectName("login_button")
         self.user_data = QtWidgets.QLineEdit(self.widget)
         self.user_data.setGeometry(QtCore.QRect(110, 90, 201, 23))
@@ -71,9 +73,14 @@ class Ui_LoginWindow(object):
         self.password_data.setText("")
         self.password_data.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.password_data.setObjectName("password_data")
+        self.check_view_password = QtWidgets.QCheckBox(self.widget)
+        self.check_view_password.setGeometry(QtCore.QRect(110, 154, 121, 21))
+        self.check_view_password.setObjectName("check_view_password")
         LoginWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(LoginWindow)
+        self.login_button.clicked.connect(LoginWindow.login) # type: ignore
+        self.check_view_password.toggled['bool'].connect(LoginWindow.cambiarVisibilidadPassword) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
         LoginWindow.setTabOrder(self.user_data, self.password_data)
         LoginWindow.setTabOrder(self.password_data, self.login_button)
@@ -85,3 +92,4 @@ class Ui_LoginWindow(object):
         self.title.setText(_translate("LoginWindow", "IDENTIFICACION"))
         self.login_button.setText(_translate("LoginWindow", "Iniciar Sesion"))
         self.user_label.setText(_translate("LoginWindow", "Usuario:"))
+        self.check_view_password.setText(_translate("LoginWindow", "Ver contraseña"))

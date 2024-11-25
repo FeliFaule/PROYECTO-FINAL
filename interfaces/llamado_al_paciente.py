@@ -14,27 +14,25 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(850, 470)
+        MainWindow.resize(1073, 670)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(850, 470))
-        MainWindow.setMaximumSize(QtCore.QSize(850, 470))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(-11, -11, 881, 631))
+        self.widget.setGeometry(QtCore.QRect(-11, -11, 1091, 681))
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
-        self.label.setGeometry(QtCore.QRect(-10, 0, 871, 631))
+        self.label.setGeometry(QtCore.QRect(-10, 0, 1101, 691))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg"))
+        self.label.setPixmap(QtGui.QPixmap("IMAGENES/background_image.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.salir_boton = QtWidgets.QPushButton(self.widget)
-        self.salir_boton.setGeometry(QtCore.QRect(25, 400, 141, 30))
+        self.salir_boton.setGeometry(QtCore.QRect(930, 630, 141, 30))
         self.salir_boton.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -46,7 +44,7 @@ class Ui_MainWindow(object):
 "}")
         self.salir_boton.setObjectName("salir_boton")
         self.atender_boton = QtWidgets.QPushButton(self.widget)
-        self.atender_boton.setGeometry(QtCore.QRect(425, 400, 141, 30))
+        self.atender_boton.setGeometry(QtCore.QRect(550, 630, 141, 30))
         self.atender_boton.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -58,7 +56,7 @@ class Ui_MainWindow(object):
 "}")
         self.atender_boton.setObjectName("atender_boton")
         self.llamar_boton = QtWidgets.QPushButton(self.widget)
-        self.llamar_boton.setGeometry(QtCore.QRect(275, 400, 141, 30))
+        self.llamar_boton.setGeometry(QtCore.QRect(400, 630, 141, 30))
         self.llamar_boton.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -70,7 +68,9 @@ class Ui_MainWindow(object):
 "}")
         self.llamar_boton.setObjectName("llamar_boton")
         self.listado_turnos = QtWidgets.QTableWidget(self.widget)
-        self.listado_turnos.setGeometry(QtCore.QRect(15, 70, 841, 311))
+        self.listado_turnos.setGeometry(QtCore.QRect(30, 70, 1041, 551))
+        self.listado_turnos.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.listado_turnos.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.listado_turnos.setObjectName("listado_turnos")
         self.listado_turnos.setColumnCount(6)
         self.listado_turnos.setRowCount(0)
@@ -89,8 +89,11 @@ class Ui_MainWindow(object):
         self.listado_turnos.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.listado_turnos.setHorizontalHeaderItem(5, item)
+        self.listado_turnos.horizontalHeader().setDefaultSectionSize(175)
+        self.listado_turnos.horizontalHeader().setMinimumSectionSize(26)
+        self.listado_turnos.horizontalHeader().setStretchLastSection(True)
         self.title_label = QtWidgets.QLabel(self.widget)
-        self.title_label.setGeometry(QtCore.QRect(225, 20, 421, 42))
+        self.title_label.setGeometry(QtCore.QRect(320, 20, 421, 42))
         font = QtGui.QFont()
         font.setFamily("DejaVu Sans Mono")
         font.setPointSize(26)
@@ -100,7 +103,7 @@ class Ui_MainWindow(object):
         self.title_label.setFont(font)
         self.title_label.setObjectName("title_label")
         self.pacientes_boton = QtWidgets.QPushButton(self.widget)
-        self.pacientes_boton.setGeometry(QtCore.QRect(664, 400, 180, 30))
+        self.pacientes_boton.setGeometry(QtCore.QRect(30, 630, 180, 30))
         self.pacientes_boton.setStyleSheet("QPushButton {\n"
 "    background-color: #3498db;\n"
 "    color: white;\n"
@@ -112,9 +115,6 @@ class Ui_MainWindow(object):
 "}")
         self.pacientes_boton.setObjectName("pacientes_boton")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         self.atender_boton.clicked.connect(MainWindow.atenderPaciente) # type: ignore
