@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>705</width>
-    <height>457</height>
+    <width>1073</width>
+    <height>666</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,18 +18,6 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>705</width>
-    <height>457</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>705</width>
-    <height>457</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>LISTADO DE TURNOS</string>
@@ -46,8 +34,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>701</width>
-      <height>431</height>
+      <width>1071</width>
+      <height>661</height>
      </rect>
     </property>
     <widget class="QLabel" name="label">
@@ -55,15 +43,15 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>711</width>
-       <height>441</height>
+       <width>1071</width>
+       <height>661</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+      <pixmap>../IMAGENES/background_image.jpg</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -72,10 +60,10 @@
     <widget class="QLabel" name="titulo">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>480</x>
        <y>20</y>
-       <width>100</width>
-       <height>34</height>
+       <width>111</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -94,8 +82,8 @@
     <widget class="QPushButton" name="boton_nuevo_turno">
      <property name="geometry">
       <rect>
-       <x>185</x>
-       <y>370</y>
+       <x>370</x>
+       <y>610</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -119,8 +107,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="boton_salir">
      <property name="geometry">
       <rect>
-       <x>385</x>
-       <y>370</y>
+       <x>570</x>
+       <y>610</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -143,20 +131,41 @@ QPushButton:hover {
     <widget class="QTableWidget" name="tablaListaTurnos">
      <property name="geometry">
       <rect>
-       <x>47</x>
-       <y>70</y>
-       <width>610</width>
-       <height>271</height>
+       <x>10</x>
+       <y>80</y>
+       <width>1051</width>
+       <height>511</height>
       </rect>
      </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>175</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
      <column>
       <property name="text">
-       <string>APELLIDO</string>
+       <string>NOMBRE</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>NOMBRE</string>
+       <string>APELLIDO</string>
       </property>
      </column>
      <column>
@@ -180,9 +189,39 @@ QPushButton:hover {
       </property>
      </column>
     </widget>
+    <widget class="QPushButton" name="boton_ordenar">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>50</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>ORDENAR</string>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>titulo</zorder>
+    <zorder>boton_nuevo_turno</zorder>
+    <zorder>boton_salir</zorder>
+    <zorder>boton_ordenar</zorder>
+    <zorder>tablaListaTurnos</zorder>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections>
@@ -218,9 +257,26 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>boton_ordenar</sender>
+   <signal>clicked()</signal>
+   <receiver>RecepcionistaMainWindow</receiver>
+   <slot>ordenarTurnos()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>-94</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>nuevoTurno()</slot>
   <slot>salir()</slot>
+  <slot>ordenarTurnos()</slot>
  </slots>
 </ui>

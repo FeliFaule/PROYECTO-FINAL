@@ -1,393 +1,688 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>atencionalpaciente</class>
- <widget class="QMainWindow" name="atencionalpaciente">
+ <widget class="QDialog" name="atencionalpaciente">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1059</width>
-    <height>600</height>
+    <width>1133</width>
+    <height>756</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>ATENCIÓN AL PACIENTE</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="Atencion_label">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>10</y>
-      <width>421</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;ATENCION AL PACIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_name">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>170</y>
-      <width>71</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>NOMBRE :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_apellido">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>230</y>
-      <width>77</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>APELLIDO :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_name">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>160</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_apellido">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>220</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_dni">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>290</y>
-      <width>33</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>DNI :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_dni">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>280</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>-40</x>
-      <y>70</y>
-      <width>1141</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Datos_label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>422</width>
-      <height>42</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;Datos del Paciente :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>-90</x>
-      <y>140</y>
-      <width>1211</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="line_3">
-    <property name="geometry">
-     <rect>
-      <x>-70</x>
-      <y>360</y>
-      <width>1151</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_telefono">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>170</y>
-      <width>83</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="mouseTracking">
-     <bool>true</bool>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>TELEFONO :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_telefono">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>160</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_fechahora">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>290</y>
-      <width>111</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>FECHA Y HORA :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_fechahora">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>280</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_obrasocial">
-    <property name="geometry">
-     <rect>
-      <x>670</x>
-      <y>220</y>
-      <width>211</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_obrasocial">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>230</y>
-      <width>103</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>OBRA SOCIAL :</string>
-    </property>
-   </widget>
-   <widget class="QTextBrowser" name="textBrowser_historial">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>440</y>
-      <width>1031</width>
-      <height>101</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="historial_label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>370</y>
-      <width>401</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>DejaVu Sans Mono</family>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <property name="lineWidth">
-     <number>0</number>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;Historial Clinico :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-    <property name="wordWrap">
-     <bool>false</bool>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-    <property name="buddy">
-     <cstring></cstring>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QLabel" name="label_dato_apellido">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1059</width>
-     <height>20</height>
+     <x>161</x>
+     <y>139</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_telefono">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>110</y>
+     <width>83</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>TELEFONO :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dato_obra_social">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>661</x>
+     <y>140</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dni">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>170</y>
+     <width>33</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>DNI :</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_finalizar">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>710</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Finalizar atención</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titulo_datos_hc">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>223</y>
+     <width>241</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans Mono</family>
+     <pointsize>8</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Historial Clínico :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="buddy">
+    <cstring></cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_indicaciones">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>520</y>
+     <width>211</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>Indicaciones</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_motivo_consulta">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>260</y>
+     <width>211</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>Motivo de consulta</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dato_dni">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>170</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dato_telefono">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>661</x>
+     <y>110</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_motivo_consulta">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>280</y>
+     <width>431</width>
+     <height>101</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QTextEdit" name="textEdit_anamnesis">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>410</y>
+     <width>431</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_apellido">
+   <property name="geometry">
+    <rect>
+     <x>84</x>
+     <y>140</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>APELLIDO :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_fondo_paciente">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>67</y>
+     <width>1141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(166, 228, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_obrasocial">
+   <property name="geometry">
+    <rect>
+     <x>563</x>
+     <y>140</y>
+     <width>90</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OBRA SOCIAL :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titulo_principal">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>421</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans Mono</family>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;ATENCIÓN AL PACIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="buddy">
+    <cstring></cstring>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_anamnesis">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>390</y>
+     <width>211</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>Anamnesis</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_fondo_hc">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>220</y>
+     <width>1141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(166, 228, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_indicaciones">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>540</y>
+     <width>431</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dato_nombre">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>161</x>
+     <y>109</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titulo_datos_paciente">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>253</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans Mono</family>
+     <pointsize>8</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Datos del Paciente :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="buddy">
+    <cstring></cstring>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_recetar">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>710</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Recetar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_volver">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>710</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Volver</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_historial">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>280</y>
+     <width>691</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_titulo_visitas">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>260</y>
+     <width>190</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>Visitas anteriores</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_nombre">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>110</y>
+     <width>71</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>NOMBRE :</string>
+   </property>
+  </widget>
+  <zorder>label_fondo_hc</zorder>
+  <zorder>label_dato_apellido</zorder>
+  <zorder>label_telefono</zorder>
+  <zorder>label_dato_obra_social</zorder>
+  <zorder>label_dni</zorder>
+  <zorder>boton_finalizar</zorder>
+  <zorder>titulo_datos_hc</zorder>
+  <zorder>label_indicaciones</zorder>
+  <zorder>label_motivo_consulta</zorder>
+  <zorder>label_dato_dni</zorder>
+  <zorder>label_dato_telefono</zorder>
+  <zorder>textEdit_motivo_consulta</zorder>
+  <zorder>textEdit_anamnesis</zorder>
+  <zorder>label_apellido</zorder>
+  <zorder>label_fondo_paciente</zorder>
+  <zorder>label_obrasocial</zorder>
+  <zorder>titulo_principal</zorder>
+  <zorder>label_anamnesis</zorder>
+  <zorder>textEdit_indicaciones</zorder>
+  <zorder>label_dato_nombre</zorder>
+  <zorder>titulo_datos_paciente</zorder>
+  <zorder>boton_recetar</zorder>
+  <zorder>boton_volver</zorder>
+  <zorder>textBrowser_historial</zorder>
+  <zorder>label_titulo_visitas</zorder>
+  <zorder>label_nombre</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>boton_recetar</sender>
+   <signal>clicked()</signal>
+   <receiver>atencionalpaciente</receiver>
+   <slot>Recetar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>790</x>
+     <y>729</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>808</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_volver</sender>
+   <signal>clicked()</signal>
+   <receiver>atencionalpaciente</receiver>
+   <slot>Volver()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>914</x>
+     <y>726</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>906</x>
+     <y>788</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_finalizar</sender>
+   <signal>clicked()</signal>
+   <receiver>atencionalpaciente</receiver>
+   <slot>finalizarAtencion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1065</x>
+     <y>726</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1063</x>
+     <y>799</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Volver()</slot>
+  <slot>Recetar()</slot>
+  <slot>finalizarAtencion()</slot>
+ </slots>
 </ui>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
-    <height>470</height>
+    <width>1073</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -15,18 +15,6 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>850</width>
-    <height>470</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>850</width>
-    <height>470</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>ATENCION AL PACIENTE</string>
@@ -37,8 +25,8 @@
      <rect>
       <x>-11</x>
       <y>-11</y>
-      <width>881</width>
-      <height>631</height>
+      <width>1091</width>
+      <height>681</height>
      </rect>
     </property>
     <widget class="QLabel" name="label">
@@ -46,15 +34,15 @@
       <rect>
        <x>-10</x>
        <y>0</y>
-       <width>871</width>
-       <height>631</height>
+       <width>1101</width>
+       <height>691</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+      <pixmap>../IMAGENES/background_image.jpg</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -63,8 +51,8 @@
     <widget class="QPushButton" name="salir_boton">
      <property name="geometry">
       <rect>
-       <x>25</x>
-       <y>400</y>
+       <x>930</x>
+       <y>630</y>
        <width>141</width>
        <height>30</height>
       </rect>
@@ -87,8 +75,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="atender_boton">
      <property name="geometry">
       <rect>
-       <x>425</x>
-       <y>400</y>
+       <x>550</x>
+       <y>630</y>
        <width>141</width>
        <height>30</height>
       </rect>
@@ -111,8 +99,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="llamar_boton">
      <property name="geometry">
       <rect>
-       <x>275</x>
-       <y>400</y>
+       <x>400</x>
+       <y>630</y>
        <width>141</width>
        <height>30</height>
       </rect>
@@ -135,12 +123,27 @@ QPushButton:hover {
     <widget class="QTableWidget" name="listado_turnos">
      <property name="geometry">
       <rect>
-       <x>15</x>
+       <x>30</x>
        <y>70</y>
-       <width>841</width>
-       <height>311</height>
+       <width>1041</width>
+       <height>551</height>
       </rect>
      </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>26</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>175</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
      <column>
       <property name="text">
        <string>NOMBRE</string>
@@ -180,7 +183,7 @@ QPushButton:hover {
     <widget class="QLabel" name="title_label">
      <property name="geometry">
       <rect>
-       <x>225</x>
+       <x>320</x>
        <y>20</y>
        <width>421</width>
        <height>42</height>
@@ -202,8 +205,8 @@ QPushButton:hover {
     <widget class="QPushButton" name="pacientes_boton">
      <property name="geometry">
       <rect>
-       <x>664</x>
-       <y>400</y>
+       <x>30</x>
+       <y>630</y>
        <width>180</width>
        <height>30</height>
       </rect>
@@ -225,7 +228,6 @@ QPushButton:hover {
     </widget>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections>

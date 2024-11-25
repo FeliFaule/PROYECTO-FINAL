@@ -54,7 +54,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../IMAGENES/Antecedentes médicos limpios _ Vector Gratis.jpg</pixmap>
+      <pixmap>../IMAGENES/background_image.jpg</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -120,6 +120,12 @@ QPushButton:hover {
      <property name="text">
       <string>Iniciar Sesion</string>
      </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QLineEdit" name="user_data">
      <property name="geometry">
@@ -169,6 +175,19 @@ QPushButton:hover {
       <enum>QLineEdit::Normal</enum>
      </property>
     </widget>
+    <widget class="QCheckBox" name="check_view_password">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>154</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ver contraseña</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -178,8 +197,42 @@ QPushButton:hover {
   <tabstop>login_button</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>login_button</sender>
+   <signal>clicked()</signal>
+   <receiver>LoginWindow</receiver>
+   <slot>login()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>check_view_password</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LoginWindow</receiver>
+   <slot>cambiarVisibilidadPassword()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>207</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>iniciar_sesion()</slot>
+  <slot>login()</slot>
+  <slot>cambiarVisibilidadPassword()</slot>
  </slots>
 </ui>
