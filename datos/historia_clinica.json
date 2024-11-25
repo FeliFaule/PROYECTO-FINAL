@@ -1,0 +1,61 @@
+{
+    "pacientes": [
+        {
+            "dni": "47708195",
+            "historia_clinica": [
+                {
+                    "fecha": "01-10-2024",
+                    "motivo_consulta": "Dolor abdominal",
+                    "anamnesis": "Se evidencia abdomen r\u00edgido y se corrobora con laboratorio gl\u00f3bulos blancos altos.",
+                    "indicaciones": "Se sugiere evaluaci\u00f3n ecogr\u00e1fica por posible apendicitis"
+                },
+                {
+                    "fecha": "08-10-2024",
+                    "motivo_consulta": "Evaluaci\u00f3n de resultado de estudios",
+                    "anamnesis": "",
+                    "indicaciones": "Los estudios y laboratorio confirman diagn\u00f3stico de apendicitis. Se coordina consulta con cirug\u00eda."
+                },
+                {
+                    "fecha": "24-11-2024",
+                    "motivo_consulta": "Dolor de garganta.",
+                    "anamnesis": "En el examen fisico se observan las amigdalas enrojecidas pero sin pus, sugiere angina viral.",
+                    "indicaciones": "Se indica paracetamol 1mg cada 12 horas durante 5 dias."
+                }
+            ]
+        },
+        {
+            "dni": "48455166",
+            "historia_clinica": [
+                {
+                    "fecha": "02-10-2024",
+                    "motivo_consulta": "N\u00e1uses y v\u00f3mitos",
+                    "anamnesis": "El paciente manifiesta malestar estomacal. Intestinos con mucho ruido. Sugiere Gastroenteritis",
+                    "indicaciones": "Se indica dieta por 7 d\u00edas y reevaluaci\u00f3n"
+                },
+                {
+                    "fecha": "09-10-2024",
+                    "motivo_consulta": "Evaluaci\u00f3n de evoluci\u00f3n de cuadro gastroenterologico",
+                    "anamnesis": "",
+                    "indicaciones": "Los v\u00f3mitos y diarrea han cedido por lo que se habilita dieta normal."
+                }
+            ]
+        },
+        {
+            "dni": "46789123",
+            "historia_clinica": [
+                {
+                    "fecha": "24-11-2024",
+                    "motivo_consulta": "Dolor de garganta.",
+                    "anamnesis": "En el examen fisico se observan las amigdolas enrojecidas pero sin pus, sugiere angina viral.",
+                    "indicaciones": "Se indica paracetamol 1mg cada 12 horas durante 5 dias."
+                },
+                {
+                    "fecha": "24-11-2024",
+                    "motivo_consulta": "Control",
+                    "anamnesis": "La garganta se encuentra absolutamente normal. Se indica alta",
+                    "indicaciones": "-"
+                }
+            ]
+        }
+    ]
+}
