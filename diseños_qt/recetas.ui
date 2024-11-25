@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecetaDialog</class>
+ <widget class="QDialog" name="RecetaDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RECETAS</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="cantidad_famaco_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>134</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dosificación:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tipo_farmaco_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>102</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fármaco:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="cada_cuanto_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>160</y>
+     <width>251</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="por_cuanto_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>114</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Por cuanto tiempo:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tipo_farmaco_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>251</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="por_cuanto_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>200</y>
+     <width>251</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>158</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans Mono</family>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;RECETAS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_guardar_receta">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>250</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Guardar Receta</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cada_cuanto_label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>126</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cada cuanto tiempo:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="cantidad_farmaco_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>251</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="boton_cancelar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_background">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>431</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../IMAGENES/background.qrc">:/imagenes/background_image.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_background</zorder>
+  <zorder>por_cuanto_label</zorder>
+  <zorder>por_cuanto_lineEdit</zorder>
+  <zorder>cantidad_famaco_label</zorder>
+  <zorder>tipo_farmaco_label</zorder>
+  <zorder>cada_cuanto_lineEdit</zorder>
+  <zorder>tipo_farmaco_lineEdit</zorder>
+  <zorder>title_label</zorder>
+  <zorder>boton_guardar_receta</zorder>
+  <zorder>cada_cuanto_label</zorder>
+  <zorder>cantidad_farmaco_lineEdit</zorder>
+  <zorder>boton_cancelar</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>tipo_farmaco_lineEdit</tabstop>
+  <tabstop>cantidad_farmaco_lineEdit</tabstop>
+  <tabstop>cada_cuanto_lineEdit</tabstop>
+  <tabstop>por_cuanto_lineEdit</tabstop>
+  <tabstop>boton_guardar_receta</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../IMAGENES/background.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>boton_guardar_receta</sender>
+   <signal>clicked()</signal>
+   <receiver>RecetaDialog</receiver>
+   <slot>guardarReceta()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>361</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boton_cancelar</sender>
+   <signal>clicked()</signal>
+   <receiver>RecetaDialog</receiver>
+   <slot>Cancelar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>guardarReceta()</slot>
+  <slot>Cancelar()</slot>
+ </slots>
+</ui>
