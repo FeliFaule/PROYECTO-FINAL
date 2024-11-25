@@ -1,29 +1,39 @@
 {
     "pacientes": [
         {
-            "nombre": "Juan",
-            "apellido": "Pérez Sanchez Disalvo",
-            "dni": "12345678",
-            "telefono": "123456789",
-            "obra_social": "OSDE",
-            "fecha_hora": "2024-11-10 14:30"
+            "nombre": "Belen",
+            "apellido": "Martinez",
+            "dni": "43543534",
+            "telefono": "3521341342",
+            "obra_social": "apross"
         },
         {
-            "nombre": "Felipe Luis",
-            "apellido": "Bustamante Faule",
-            "dni": "122335458",
-            "telefono": "254564344",
-            "obra_social": "OSDE",
-            "fecha_hora": "2024-11-10 14:45"
+            "nombre": "Felipe",
+            "apellido": "Faule",
+            "dni": "47708195",
+            "telefono": "3517560308",
+            "obra_social": "OSDE"
         },
         {
-            "nombre": "Ana",
-            "apellido": "García",
-            "dni": "87654321",
-            "telefono": "987654321",
-            "obra_social": "Swiss Medical",
-            "fecha_hora": "2024-11-10 15:00"
+            "nombre": "Pipa",
+            "apellido": "Higuain",
+            "dni": "44444444",
+            "telefono": "1123455432",
+            "obra_social": "OMINT"
+        },
+        {
+            "nombre": "Francisco",
+            "apellido": "Conejero",
+            "dni": "48455166",
+            "telefono": "3512454499",
+            "obra_social": "apross"
+        },
+        {
+            "nombre": "Matias",
+            "apellido": "Faule",
+            "dni": "46789123",
+            "telefono": "3518975645",
+            "obra_social": "OSDE"
         }
-        
     ]
 }
