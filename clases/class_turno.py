@@ -1,5 +1,6 @@
 import json
 from clases import class_paciente
+from PyQt5.QtWidgets import QMessageBox
 
 class Turno ():
     def __init__(self):
@@ -50,3 +51,24 @@ class Turno ():
         except Exception as e:
             print(f"Error al crear el archivo JSON: {e}")
             return False
+        
+    def eliminarTurno(self, dni, fecha_hora):
+        # Se elimina el turno porque ya ha sido atendido.
+        try:
+            with open(self.archivo_json, "r") as archivo:
+                data = json.load(archivo)
+                turnos = data["turno"]
+
+        except FileNotFoundError:
+            QMessageBox.critical(self, "Error", "El archivo de turnos no se encontró.")
+        except json.JSONDecodeError:
+            QMessageBox.critical(self, "Error", "Error en el formato del archivo de turnos.")
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Ocurrió un error al cargar los turnos: {e}")    
+        
+        # Nos quedamos con la estructura de todos los turnos que no coincidan con la fecha y DNI.
+        turnos = [turno for turno in turnos if turno["dni"] != dni or turno["fecha_hora"] != fecha_hora]
+
+        # Guardar los datos actualizados de vuelta al archivo JSON
+        with open("datos/turnos.json", "w") as archivo:
+            json.dump(data, archivo, indent=4)        
