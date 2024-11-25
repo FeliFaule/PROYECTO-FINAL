@@ -1,7 +1,7 @@
+from clases.class_turno import Turno
 from interfaces.recepcionista_turnos import Ui_modalNuevoTurno
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog
-import json
 from datetime import datetime
 
 class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
@@ -29,31 +29,24 @@ class VentanaNuevoTurno(QDialog, Ui_modalNuevoTurno):
             return
 
         # Crear el nuevo turno
-        nuevo_turno = {
-            "nombre": nombre,
-            "apellido": apellido,
-            "dni": dni,
-            "telefono": telefono,
-            "obra_social": obra_social,
-            "fecha_hora": fecha_hora
-        }
+        nuevo_turno = Turno()
+        nuevo_turno.crearTurno(nombre, apellido, dni, telefono, obra_social, fecha_hora)
         
-        # Leer el archivo JSON y agregar el nuevo turno
-        try:
-            with open('datos/turnos.json', 'r') as file:
-                data = json.load(file)
-        except FileNotFoundError:
-            data = {"turno": []}  # Si el archivo no existe, creamos la estructura inicial
+        # Se pregunta a la recepcionista si quiere registrar el turno
+        respuesta = QtWidgets.QMessageBox.question(self, "Registrar Turno", "¿Deseas registrar el nuevo turno?",
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+            QtWidgets.QMessageBox.No
+        )
 
-        # Agregar el nuevo turno a la lista de turnos
-        data["turno"].append(nuevo_turno)
+        # Procesar la respuesta del usuario
+        if respuesta == QtWidgets.QMessageBox.Yes:
+            turno_creado = nuevo_turno.registrarTurno()
 
-        # Guardar los datos actualizados en el archivo JSON
-        with open('datos/turnos.json', 'w') as file:
-            json.dump(data, file, indent=4)
-        
         # Confirmar al usuario
-        QtWidgets.QMessageBox.information(self, 'Guardado', 'El turno ha sido guardado correctamente.')
+        if turno_creado:
+            QtWidgets.QMessageBox.information(self, 'Guardado', 'El turno ha sido guardado correctamente.')
+        else:
+            QtWidgets.QMessageBox.error(self, 'Error', 'El turno NO ha podido ser guardado debido a la ocurrencia de un error. Intente nuevamente.')
 
         # Limpiar los campos de entrada
         self.lineEdit_nombre.clear()
