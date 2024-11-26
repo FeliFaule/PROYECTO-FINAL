@@ -1,6 +1,5 @@
 import json
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
-from PyQt5.QtCore import pyqtSlot
 from interfaces.llamado_al_paciente import Ui_MainWindow
 from controladores.todos_los_pacientes_controlador import verPacientes
 from controladores.atencionalpaciente_controlador import AtencionPaciente
@@ -97,7 +96,6 @@ class AtencionPacienteWindow(QMainWindow, Ui_MainWindow):
     def abrirInfoPacientes(self):
         ventanaTurno = verPacientes()
         ventanaTurno.exec_()
-        self.cargarTurnos()
 
 
     def salir(self):
