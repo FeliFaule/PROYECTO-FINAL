@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1073</width>
-    <height>667</height>
+    <width>1417</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,18 +18,30 @@
     <rect>
      <x>0</x>
      <y>-50</y>
-     <width>1081</width>
-     <height>721</height>
+     <width>1421</width>
+     <height>861</height>
     </rect>
    </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>50</y>
-      <width>1081</width>
-      <height>671</height>
+      <x>-20</x>
+      <y>40</y>
+      <width>1441</width>
+      <height>831</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 189, 139);</string>
     </property>
     <property name="text">
      <string/>
@@ -44,10 +56,10 @@
    <widget class="QLabel" name="titulo">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>80</y>
-      <width>190</width>
-      <height>42</height>
+      <x>-1</x>
+      <y>55</y>
+      <width>661</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
@@ -58,67 +70,20 @@
       <bold>true</bold>
      </font>
     </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;PACIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="salir_boton">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>673</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-QPushButton:hover {
-    background-color: #2980b9;
-}
-</string>
+     <string notr="true">background-color: rgb(0, 189, 139);</string>
     </property>
     <property name="text">
-     <string>SALIR</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;LISTADO DE PACIENTES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="verHistorial_boton">
+   <widget class="QTableWidget" name="listado_pacientes">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>670</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton {
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-QPushButton:hover {
-    background-color: #2980b9;
-}
-</string>
-    </property>
-    <property name="text">
-     <string>VER HISTORIAL</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>1051</width>
-      <height>511</height>
+      <x>0</x>
+      <y>90</y>
+      <width>661</width>
+      <height>731</height>
      </rect>
     </property>
     <property name="selectionMode">
@@ -158,40 +123,317 @@ QPushButton:hover {
     </column>
     <column>
      <property name="text">
-      <string>TELEFONO</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>OBRA SOCIAL</string>
      </property>
     </column>
-    <column>
-     <property name="text">
-      <string>FECHA Y HORA</string>
-     </property>
-    </column>
    </widget>
+   <widget class="QLabel" name="label_dato_dni">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>170</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_nombre">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>110</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>NOMBRE :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dato_nombre">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>109</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_apellido">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>140</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>APELLIDO :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dni">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>170</y>
+      <width>33</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>DNI :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dato_apellido">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>139</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_detalle_paciente">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>55</y>
+      <width>741</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 170, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; font-style:italic;&quot;&gt;DETALLE DEL PACIENTE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_telefono">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>110</y>
+      <width>83</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>TELEFONO :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_obrasocial">
+    <property name="geometry">
+     <rect>
+      <x>1032</x>
+      <y>142</y>
+      <width>90</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OBRA SOCIAL :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dato_obra_social">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>140</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_dato_telefono">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>110</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(74, 74, 74);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_historial">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>250</y>
+      <width>741</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hc">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>220</y>
+      <width>741</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Sans Mono</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 170, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;HISTORIAL CLINICO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>titulo</zorder>
+   <zorder>listado_pacientes</zorder>
+   <zorder>label_dato_dni</zorder>
+   <zorder>label_nombre</zorder>
+   <zorder>label_dato_nombre</zorder>
+   <zorder>label_apellido</zorder>
+   <zorder>label_dni</zorder>
+   <zorder>label_dato_apellido</zorder>
+   <zorder>label_detalle_paciente</zorder>
+   <zorder>label_telefono</zorder>
+   <zorder>label_obrasocial</zorder>
+   <zorder>label_dato_obra_social</zorder>
+   <zorder>label_dato_telefono</zorder>
+   <zorder>label_hc</zorder>
+   <zorder>textBrowser_historial</zorder>
+  </widget>
+  <widget class="QPushButton" name="salir_boton">
+   <property name="geometry">
+    <rect>
+     <x>1280</x>
+     <y>780</y>
+     <width>131</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>SALIR</string>
+   </property>
   </widget>
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>verHistorial_boton</sender>
-   <signal>clicked()</signal>
-   <receiver>historialDePacientes</receiver>
-   <slot>verHistorial()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>850</x>
-     <y>485</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>313</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>salir_boton</sender>
    <signal>clicked()</signal>
@@ -199,8 +441,8 @@ QPushButton:hover {
    <slot>salir()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>700</x>
-     <y>485</y>
+     <x>1410</x>
+     <y>780</y>
     </hint>
     <hint type="destinationlabel">
      <x>313</x>
@@ -208,9 +450,25 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>listado_pacientes</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>historialDePacientes</receiver>
+   <slot>cargarHistoriaClinica()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>738</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>888</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>salir()</slot>
-  <slot>verHistorial()</slot>
+  <slot>cargarHistoriaClinica()</slot>
  </slots>
 </ui>
