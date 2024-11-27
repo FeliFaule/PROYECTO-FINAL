@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication
 from controladores.ui_login_controlador import Login
-
+import serial
 
 
 if __name__ == "__main__":

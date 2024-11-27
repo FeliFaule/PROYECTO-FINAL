@@ -20,6 +20,12 @@
                     "motivo_consulta": "Dolor de garganta.",
                     "anamnesis": "En el examen fisico se observan las amigdalas enrojecidas pero sin pus, sugiere angina viral.",
                     "indicaciones": "Se indica paracetamol 1mg cada 12 horas durante 5 dias."
+                },
+                {
+                    "fecha": "27-11-2024",
+                    "motivo_consulta": "prueba\t",
+                    "anamnesis": "prueba",
+                    "indicaciones": "prueba"
                 }
             ]
         },
@@ -54,6 +60,28 @@
                     "motivo_consulta": "Control",
                     "anamnesis": "La garganta se encuentra absolutamente normal. Se indica alta",
                     "indicaciones": "-"
+                }
+            ]
+        },
+        {
+            "dni": "44444444",
+            "historia_clinica": [
+                {
+                    "fecha": "27-11-2024",
+                    "motivo_consulta": "prueba1\t\t",
+                    "anamnesis": "prueba2",
+                    "indicaciones": "prueba3"
+                }
+            ]
+        },
+        {
+            "dni": "35687263",
+            "historia_clinica": [
+                {
+                    "fecha": "27-11-2024",
+                    "motivo_consulta": "PRUEBA\t",
+                    "anamnesis": "PRUEBA",
+                    "indicaciones": "PRUEBA"
                 }
             ]
         }

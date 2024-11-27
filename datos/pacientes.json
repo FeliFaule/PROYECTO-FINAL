@@ -5,7 +5,7 @@
             "apellido": "Martinez",
             "dni": "43543534",
             "telefono": "3521341342",
-            "obra_social": "apross"
+            "obra_social": "APROSS"
         },
         {
             "nombre": "Felipe",
@@ -26,7 +26,7 @@
             "apellido": "Conejero",
             "dni": "48455166",
             "telefono": "3512454499",
-            "obra_social": "apross"
+            "obra_social": "APROSS"
         },
         {
             "nombre": "Matias",
@@ -34,6 +34,20 @@
             "dni": "46789123",
             "telefono": "3518975645",
             "obra_social": "OSDE"
+        },
+        {
+            "nombre": "Bruno",
+            "apellido": "Faule",
+            "dni": "35687263",
+            "telefono": "3517863476",
+            "obra_social": "OSDE"
+        },
+        {
+            "nombre": "Lara",
+            "apellido": "GoleadorA",
+            "dni": "77777777",
+            "telefono": "3512435252",
+            "obra_social": "THE GOAT"
         }
     ]
 }

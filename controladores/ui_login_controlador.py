@@ -10,13 +10,10 @@ class Login(QMainWindow, Ui_LoginWindow):
     def __init__(self):  # Constructor de la clase Login
         super().__init__()  # Llama al constructor de QMainWindow, inicializando la ventana
         self.setupUi(self)  # Llama a setupUi, pasándole la instancia de 'self' (Login)
-
-        # Configurar QLineEdit para ocultar la contraseña por defecto
-        self.password_data.setEchoMode(QLineEdit.Password)
-        
-        # Configurar QLineEdit para ocultar la contraseña por defecto
+        self.user_data.setFocus()
+        #self.arduino = self.configurar_arduino()
         self.archivo_json = "datos/usuarios.json"
-        
+
 
     def cambiarVisibilidadPassword(self):
         #Alternar entre mostrar y ocultar la contraseña.
@@ -32,7 +29,7 @@ class Login(QMainWindow, Ui_LoginWindow):
         try:
             usuario_verificado = False
             
-            # Abrir el archivo csv en modo lectura
+            # Abrir el archivo JSON de Usuarios en modo lectura
             with open(self.archivo_json, 'r') as archivo:
                 contenido = json.load(archivo)
                 usuarios = contenido["usuarios"]

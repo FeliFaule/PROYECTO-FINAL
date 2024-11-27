@@ -1,22 +1,6 @@
 {
     "turno": [
         {
-            "nombre": "Felipe",
-            "apellido": "Faule",
-            "dni": "47708195",
-            "telefono": "3517560308",
-            "obra_social": "OSDE",
-            "fecha_hora": "20-11-2024 23:31"
-        },
-        {
-            "nombre": "Bruno",
-            "apellido": "Faule",
-            "dni": "35687263",
-            "telefono": "3517863476",
-            "obra_social": "OSDE",
-            "fecha_hora": "20-11-2024 23:32"
-        },
-        {
             "nombre": "Francisco",
             "apellido": "Conejero",
             "dni": "48455166",
@@ -39,14 +23,6 @@
             "telefono": "1123456789",
             "obra_social": "THE FUCKING GOAT",
             "fecha_hora": "22-11-2024 23:42"
-        },
-        {
-            "nombre": "Pipa",
-            "apellido": "Higuain",
-            "dni": "44444444",
-            "telefono": "1123455432",
-            "obra_social": "OMINT",
-            "fecha_hora": "22-11-2024 20:46"
         },
         {
             "nombre": "Eva",
@@ -127,6 +103,22 @@
             "telefono": "3518975645",
             "obra_social": "OSDE",
             "fecha_hora": "24-11-2024 21:22"
+        },
+        {
+            "nombre": "Ramiro",
+            "apellido": "Cardo",
+            "dni": "347899098",
+            "telefono": "351 8794545",
+            "obra_social": "OSDE",
+            "fecha_hora": "27-11-2024 08:39"
+        },
+        {
+            "nombre": "Cristian",
+            "apellido": "Roldan",
+            "dni": "45876908",
+            "telefono": "23423424545",
+            "obra_social": "OSDE",
+            "fecha_hora": "27-11-2024 12:11"
         }
     ]
 }
